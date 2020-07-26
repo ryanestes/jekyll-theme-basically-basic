@@ -1,5 +1,5 @@
 ---
-title: ALl Posts
+title: All Posts
 layout: posts
 permalink: /posts/
 entries_layout: list
