@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: about
 title: About Me
 date: '2019-06-18 21:20:08'
 ---
