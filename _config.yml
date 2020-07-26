@@ -25,9 +25,9 @@ author:
   picture: /assets/images/avatar.jpg
 twitter_username: Ryandinho_
 github_username: ryanestes
-logo: avatar.jpg
-search: true
-search_full_content: true
+logo: /assets/images/avatar.jpg
+search: false
+search_full_content: false
 search_provider: # lunr (default), algolia
 algolia:
   application_id: # YOUR_APPLICATION_ID
