@@ -39,6 +39,7 @@ algolia:
 disqus:
   shortname: ryandinho
 google_analytics: UA-142299262-1
+linkedin_username: ryanestes5
 
 # Build settings
 markdown: kramdown
