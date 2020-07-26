@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Contact
 date: '2019-06-15 17:01:14'
 ---
