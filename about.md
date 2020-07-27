@@ -11,7 +11,7 @@ I created this blog to use as a reference guide for all of my studies, research,
 ### Certifications
 
 #### (ISC)<sup>2</sup>
-<figure style="width: 150px" class="align-left">
+<figure style="width: 150px">
   <img src="/assets/images/certs/isc2_associate.png" alt="">
  <figcaption>Associate of ISC<sup>2</sup></figcaption>
 </figure>
@@ -19,24 +19,22 @@ I created this blog to use as a reference guide for all of my studies, research,
 ---
 
 <br/>
-<br/>
-<br/>
 
 #### CompTIA
 
-<figure style="width: 150px" class="align-left">
+<figure style="width: 150px">
   <img src="/assets/images/certs/A-.png" alt="">
  <figcaption>A+</figcaption>
 </figure>
-<figure style="width: 150px" class="align-left">
+<figure style="width: 150px">
   <img src="/assets/images/certs/Network-.png" alt="">
  <figcaption>Network+</figcaption>
 </figure>
-<figure style="width: 150px" class="align-left">
+<figure style="width: 150px">
   <img src="/assets/images/certs/Security-.png" alt="">
  <figcaption>Security+</figcaption>
 </figure>
-<figure style="width: 150px" class="align-left">
+<figure style="width: 150px">
   <img src="/assets/images/certs/CySA-.png" alt="">
  <figcaption>CySA+</figcaption>
 </figure>
@@ -44,37 +42,31 @@ I created this blog to use as a reference guide for all of my studies, research,
 ---
 
 <br/>
-<br/>
-<br/>
 
 #### Offensive Security
 
-<figure style="width: 150px" class="align-left">
+<figure style="width: 150px">
   <img src="/assets/images/certs/OSWP.png" alt="">
  <figcaption>OSWP</figcaption>
 </figure>
  
 ---
 
-<br/>
-<br/>
-<br/>
+<br/?
  
 #### CWNP
 
-<figure style="width: 150px" class="align-left">
+<figure style="width: 150px">
   <img src="/assets/images/certs/cwt.png" alt="">
  <figcaption>CWT</figcaption>
 </figure>
-<figure style="width: 150px" class="align-left">
+<figure style="width: 150px">
   <img src="/assets/images/certs/cws.png" alt="">
  <figcaption>CWS</figcaption>
 </figure>
 
 ---
 
-<br/>
-<br/>
 <br/>
 
 #### eLearnSecurity
