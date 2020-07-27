@@ -18,8 +18,6 @@ I created this blog to use as a reference guide for all of my studies, research,
 
 ---
 
-<br/>
-
 #### CompTIA
 
 <figure style="width: 150px">
@@ -41,8 +39,6 @@ I created this blog to use as a reference guide for all of my studies, research,
 
 ---
 
-<br/>
-
 #### Offensive Security
 
 <figure style="width: 150px">
@@ -51,8 +47,6 @@ I created this blog to use as a reference guide for all of my studies, research,
 </figure>
  
 ---
-
-<br/?
  
 #### CWNP
 
@@ -66,8 +60,6 @@ I created this blog to use as a reference guide for all of my studies, research,
 </figure>
 
 ---
-
-<br/>
 
 #### eLearnSecurity
 
