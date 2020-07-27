@@ -3,7 +3,7 @@ layout: about
 title: About Me
 ---
 
-I created this blog to use as a reference guide for all of my studies, research, and anything I feel important worthy of sharing. Currently, I'm an intrusion analyst for **WatchGuard Technologies, Inc.** and student at **Saint Louis University (SLU)** studying to obtain a Master of Science (M.S.) in Cyber Security degree. My current research interests are phishing, website/DNS analysis, wireless (in)security, and reverse malware engineering/malware analysis. All information on this website or derived from this website are my personal thoughts and in no way reflect the thoughts of **WatchGuard Technologies, Inc.** or **SLU**.
+I created this blog to use as a reference guide for all of my studies, research, and anything I feel important worthy of sharing. Currently, I'm an intrusion analyst for **WatchGuard Technologies, Inc.** and a student at **Saint Louis University (SLU)** studying to obtain a Master of Science (M.S.) in Cyber Security degree. My current research interests are phishing, website/DNS analysis, wireless (in)security, and malware reverse engineering/malware analysis. All information on this website or derived from this website are my personal thoughts and in no way reflect the thoughts of **WatchGuard Technologies, Inc.** or **SLU**.
 
 **CV available by [request](/contact/).**
 
@@ -15,6 +15,8 @@ I created this blog to use as a reference guide for all of my studies, research,
   <img src="/assets/images/certs/isc2_associate.png" alt="">
  <figcaption>Associate of ISC<sup>2</sup></figcaption>
 </figure>
+
+</br>
 
 #### CompTIA
 
@@ -35,12 +37,16 @@ I created this blog to use as a reference guide for all of my studies, research,
  <figcaption>CySA+</figcaption>
 </figure>
 
+</br>
+
 #### Offensive Security
 
 <figure style="width: 150px" class="align-left">
   <img src="/assets/images/certs/OSWP.png" alt="">
  <figcaption>OSWP</figcaption>
 </figure>
+ 
+</br>
  
 #### CWNP
 
@@ -52,6 +58,8 @@ I created this blog to use as a reference guide for all of my studies, research,
   <img src="/assets/images/certs/cws.png" alt="">
  <figcaption>CWS</figcaption>
 </figure>
+
+</br>
 
 #### eLearnSecurity
 
