@@ -37,7 +37,7 @@ WEP uses the RC4 stream cipher to encrypt traffic (confidentiality) and the Cycl
 
 ##### Visualization:
 
-![WEP_Seed](/content/images/2019/12/WEP_Seed.png)
+![WEP_Seed](/assets/images/12/WEP_Seed.png)
 
 _Now is when the cipher text is created_
 
@@ -49,7 +49,7 @@ _Now is when the cipher text is created_
 
 ##### Visualization:
 
-![WEP_Plaintext_Algo-2](/content/images/2019/12/WEP_Plaintext_Algo-2.png)
+![WEP_Plaintext_Algo-2](/assets/images/12/WEP_Plaintext_Algo-2.png)
 
 This process occurs for each packet leaving the sender in the WEP encryption process. Since the process uses RC4, a symmetric encryption technique, the same WEP key is also used to decrypt the cipher text. Symmetric encryption means the encrypting key is also the decrypting key. Thus, the receiver simply XORs the packet (after stripping the ICV to ensure no alterations occured in transit) and the plaintext is revealed. There is a bit more that occurs in the encyption/decryption process, but that is the primary process at a high-level. Now, on to how to break this WEP encryption process and there are quite a few techniques.
 
@@ -96,44 +96,44 @@ For this proof-of-concept, I am using the following software/hardware:
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 ### Discovering Victim Router Easily:
 
-- 
+-
 
 Acquire your wireless card interface:
 
 `airmon-ng`
 
-![injectiontest1-1](/content/images/2019/12/injectiontest1-1.png)
+![injectiontest1-1](/assets/images/12/injectiontest1-1.png)
 
 The Interface column lists your wireless card interface name to be used for injection. In my case it is **wlan0**.
 
-- 
+-
 
 Put your wireless card in monitor mode:
 
 `airmon-ng start wlan0`
 
-![injectiontest2-1](/content/images/2019/12/injectiontest2-1.png)
+![injectiontest2-1](/assets/images/12/injectiontest2-1.png)
 
 Highlighted is the portion that successfully states the interface was placed into monitoring mode under a different interface name: **wlan0mon**. Don't worry about the processes that could cause trouble, it usually doesn't cause much hinderance. If it does, enter: `airmon-ng check kill` and enter the command above again.
 
-- 
+-
 
 Verify the card is in monitor mode by re-entering airmon-ng:
 
 `airmon-ng`
 
-![injectiontest3-1](/content/images/2019/12/injectiontest3-1.png)
+![injectiontest3-1](/assets/images/12/injectiontest3-1.png)
 
 The interface is changed from **wlan0** to **wlan0mon** indicating the wireless card was succesfully placed into monitoring mode.
 
-- 
+-
 
 Use airodump-ng to gather information of APs near you and choose (or find) your victim AP:
 
 `airodump-ng wlan0mon`
 
-![airodump-ng](/content/images/2019/12/airodump-ng.png)  
- ![airodump-ng-output-1](/content/images/2019/12/airodump-ng-output-1.png)
+![airodump-ng](/assets/images/12/airodump-ng.png)  
+ ![airodump-ng-output-1](/assets/images/12/airodump-ng-output-1.png)
 
 Once the command is inserted, the following output is displayed (the bottom screen), and is dynamic. I have censored all of the APs that aren't my test AP I am using for all of these tests for privacy purposes. The AP I am using is called DIR-615.
 
@@ -163,50 +163,50 @@ If you don't have this information, use the [injection test]((#injectiontest)) o
 
 **START**
 
-- 
+-
 
 Put your wireless card in monitor mode ON THE SAME CHANNEL AS THE VICTIM AP (THIS IS A MUST):
 
 `airmon-ng start wlan0 3`
 
-![injectiontest5-1](/content/images/2019/12/injectiontest5-1.png)
+![injectiontest5-1](/assets/images/12/injectiontest5-1.png)
 
 The channel number goes at the end of the command, highlighted above.
 
-- 
+-
 
 Verify the card is in monitor mode by re-entering airmon-ng:
 
 `airmon-ng`
 
-![injectiontest3-1](/content/images/2019/12/injectiontest3-1.png)
+![injectiontest3-1](/assets/images/12/injectiontest3-1.png)
 
 The interface is changed from **wlan0** to **wlan0mon** indicating the wireless card was succesfully placed into monitoring mode.
 
-- 
+-
 
 Perform the deauthentication attack:
 
 `aireplay-ng -0 1 -a 00:18:E7:EA:2A:53 -c 00:04:4B:59:10:88 wlan0mon`
 
-![deauthattackoutput](/content/images/2019/12/deauthattackoutput.png)
+![deauthattackoutput](/assets/images/12/deauthattackoutput.png)
 
     -0: indicating the deauthentication attack (the 1 means to send 1 deauth frame)
     -a: the victim AP MAC address (00:18:E7:EA:2A:53)
     -c: the victim client MAC address (00:04:4B:59:10:88, this is my android tablet)
 
-![airodumpfilterbyMAC](/content/images/2019/12/airodumpfilterbyMAC.png)  
- ![PROOFOFDEAUTH](/content/images/2019/12/PROOFOFDEAUTH.png)
+![airodumpfilterbyMAC](/assets/images/12/airodumpfilterbyMAC.png)  
+ ![PROOFOFDEAUTH](/assets/images/12/PROOFOFDEAUTH.png)
 
 The deauthentication process happens really quick and if you monitor your victim client as you enter the attacking command, you can witness the deauthentication process. If you run airodump-ng by filtering of the client only (pictured above), the PWR should drop to 0, indicating a successful deauthentication as well. The intricacies of the deauthentication process are out-of-scope for this post and will be discussed in more depth during hacking of WPA/WPA2 to acquire the 4-way handshake.
 
-- 
+-
 
 Turn off monitoring mode on the interface when complete with all activities:
 
 `airmon-ng stop wlan0mon`
 
-![injectiontest8-stop-1-1](/content/images/2019/12/injectiontest8-stop-1-1.png)
+![injectiontest8-stop-1-1](/assets/images/12/injectiontest8-stop-1-1.png)
 
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 
@@ -229,50 +229,50 @@ If you don't have this information, use the [injection test]((#injectiontest)) o
 
 **START**
 
-- 
+-
 
 Put your wireless card in monitor mode ON THE SAME CHANNEL AS THE VICTIM AP (THIS IS A MUST):
 
 `airmon-ng start wlan0 3`
 
-![injectiontest5-1](/content/images/2019/12/injectiontest5-1.png)
+![injectiontest5-1](/assets/images/12/injectiontest5-1.png)
 
 The channel number goes at the end of the command, highlighted above.
 
-- 
+-
 
 Verify the card is in monitor mode by re-entering airmon-ng:
 
 `airmon-ng`
 
-![injectiontest3-1](/content/images/2019/12/injectiontest3-1.png)
+![injectiontest3-1](/assets/images/12/injectiontest3-1.png)
 
 The interface is changed from **wlan0** to **wlan0mon** indicating the wireless card was succesfully placed into monitoring mode.
 
-- 
+-
 
 Perform the fake authentication attack:
 
 `aireplay-ng -1 0 -e DIR-615 -a 00:18:E7:EA:2A:53 -h 00:C0:CA:96:C1:B6 wlan0mon`
 
-![fakeauthattack-1](/content/images/2019/12/fakeauthattack-1.png)
+![fakeauthattack-1](/assets/images/12/fakeauthattack-1.png)
 
     -1: the fake authentication attack (0 is the reassociation timing, you can alter this to send keep alive packets (6000 recommended))
     -e: The ESSID of the victim AP (DIR-615)
     -a: the MAC address of the victim AP (00:18:E7:EA:2A:53)
     -h: the MAC address of your wireless card to be used for fake auth (00:C0:CA:96:C1:B6)
 
-![PROOFOFFAKEAUTH-1](/content/images/2019/12/PROOFOFFAKEAUTH-1.png)
+![PROOFOFFAKEAUTH-1](/assets/images/12/PROOFOFFAKEAUTH-1.png)
 
 Highlighted in the picture above in the airodump-ng output (`airodump-ng --channel 3 --essid DIR-615 wlan0mon`) is proof the fake authentication was successful. In the picture above that (the command window), I have highlighted the command output also indicating a successful fake authentication.
 
-- 
+-
 
 Turn off monitoring mode on the interface when complete with all activities:
 
 `airmon-ng stop wlan0mon`
 
-![injectiontest8-stop-1-1](/content/images/2019/12/injectiontest8-stop-1-1.png)
+![injectiontest8-stop-1-1](/assets/images/12/injectiontest8-stop-1-1.png)
 
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 
@@ -292,7 +292,7 @@ Prior to this attack, it is good practice to conduct the [Fake Authentication at
 
 **Start**
 
-- 
+-
 
 Assuming the fake authentication was performed, start airodump-ng to monitor wireless network traffic and to output the keystream to a file (the keystream is used to acquire the WEP key directly):
 
@@ -306,13 +306,13 @@ Assuming the fake authentication was performed, start airodump-ng to monitor wir
 
 The airdump-ng action here is REQUIRED to acquire the WEP key and is vital to keep the window open and the traffic capture ongoing to know if the atack is working and to know how many IV's (data column) are captured.
 
-- 
+-
 
 Perform the interactive packet replay:
 
 `aireplay-ng -2 -b 00:18:E7:EA:2A:53 -d FF:FF:FF:FF:FF:FF -f 1 -m 68 -n 86 wlan0mon`
 
-![interactivepacketreplay-FINAL-1](/content/images/2019/12/interactivepacketreplay-FINAL-1.png)
+![interactivepacketreplay-FINAL-1](/assets/images/12/interactivepacketreplay-FINAL-1.png)
 
     -2: the interactive packet replay attack flag
     -b: the victim AP MAC address (00:18:E7:EA:2A:53)
@@ -323,7 +323,7 @@ Perform the interactive packet replay:
 
 The -m and -n flags set to 68-86 are typical sizes for ARP packets which further filters packets to look for.
 
-![interactivepacketreplay-FINAL-2-1](/content/images/2019/12/interactivepacketreplay-FINAL-2-1.png)
+![interactivepacketreplay-FINAL-2-1](/assets/images/12/interactivepacketreplay-FINAL-2-1.png)
 
 The above picture is the output after a successful packet is discovered. Enter **y** to use the packet and it will output the packet replay to a file name **replay\_src#.cap**. It will continue to run until you stop it will **ctrl-c**.
 
@@ -333,7 +333,7 @@ After `y` is entered on the attack, you will see the data column quickly enumera
 
 ![interactivepacketreplay-airodump1-1](/content/images/2020/01/interactivepacketreplay-airodump1-1.png)
 
-- 
+-
 
 Turn off monitoring mode on the interface when complete with all activities:
 
@@ -345,13 +345,13 @@ Turn off monitoring mode on the interface when complete with all activities:
 
 The key was found!
 
-- 
+-
 
 Turn off monitoring mode on the interface when complete with all activities:
 
 `airmon-ng stop wlan0mon`
 
-![injectiontest8-stop-1-1](/content/images/2019/12/injectiontest8-stop-1-1.png)
+![injectiontest8-stop-1-1](/assets/images/12/injectiontest8-stop-1-1.png)
 
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 
@@ -372,7 +372,7 @@ Essentially, to effectively and properly perform this attack, you will need the 
 
 Start with 4 windows up so you are able to see all of them at once in your VM (trust me it makes it easier). In this order, perform these attacks/commands:
 
-- 
+-
 
 Start airodump-ng to monitor wireless network traffic and to output the keystream to a file (the keystream is used to acquire the WEP key directly):
 
@@ -386,7 +386,7 @@ Start airodump-ng to monitor wireless network traffic and to output the keystrea
 
 The airdump-ng action here is REQUIRED to acquire the WEP key and is vital to keep the window open and the traffic capture ongoing to know if the atack is working and to know how many IV's (data column) are captured.
 
-- 
+-
 
 Perform the [fake authentication attack](#fakeauthentication):
 
@@ -396,7 +396,7 @@ Perform the [fake authentication attack](#fakeauthentication):
 
 This is to ensure the attack is more easily performed with a replay of the ARP packet.
 
-- 
+-
 
 Perform the ARP request replay attack:
 
@@ -410,7 +410,7 @@ Perform the ARP request replay attack:
 
 As highlighted, the pcap information will be saved to a file created by aireplay-ng. Once a successful packet is found (if you're having trouble use a deauthentication attack as shown below), the screen will quickly flood with new lines indicating packets read and sent.
 
-- 
+-
 
 Perform the [deauthentication attack](#deauthentication):
 
@@ -432,13 +432,13 @@ This is expedite an ARP packet being sent to the AP from the victim client.
 
 The key is found!
 
-- 
+-
 
 Turn off monitoring mode on the interface when complete with all activities:
 
 `airmon-ng stop wlan0mon`
 
-![injectiontest8-stop-1-1](/content/images/2019/12/injectiontest8-stop-1-1.png)
+![injectiontest8-stop-1-1](/assets/images/12/injectiontest8-stop-1-1.png)
 
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 
@@ -455,27 +455,27 @@ This attack is not used to acquire a WEP key. Rather, it uses cryptanalysis to r
 
 **START**
 
-- 
+-
 
 Put your wireless card in monitor mode ON THE SAME CHANNEL AS THE VICTIM AP (THIS IS A MUST):
 
 `airmon-ng start wlan0 3`
 
-![injectiontest5-1](/content/images/2019/12/injectiontest5-1.png)
+![injectiontest5-1](/assets/images/12/injectiontest5-1.png)
 
 The channel number goes at the end of the command, highlighted above.
 
-- 
+-
 
 Verify the card is in monitor mode by re-entering airmon-ng:
 
 `airmon-ng`
 
-![injectiontest3-1](/content/images/2019/12/injectiontest3-1.png)
+![injectiontest3-1](/assets/images/12/injectiontest3-1.png)
 
 The interface is changed from **wlan0** to **wlan0mon** indicating the wireless card was succesfully placed into monitoring mode.
 
-- 
+-
 
 Perform the KoreK ChopChop attack:
 
@@ -489,7 +489,7 @@ Perform the KoreK ChopChop attack:
     -m: minimum packet size to filter (1)
     -n: maximum packet size to filter (100)
 
-- 
+-
 
 once you find a SMALL packet (\< 100), enter **y** to use it:
 
@@ -499,13 +499,13 @@ once you find a SMALL packet (\< 100), enter **y** to use it:
 
 **THIS ATTACK NOW MOVES TO THE [FRAGMENTATION ATTACK](#fragmentationattack) BELOW! (THE PROCESS IS EXACTLY THE SAME FROM THIS POINT)**
 
-- 
+-
 
 Turn off monitoring mode on the interface when complete with all activities:
 
 `airmon-ng stop wlan0mon`
 
-![injectiontest8-stop-1-1](/content/images/2019/12/injectiontest8-stop-1-1.png)
+![injectiontest8-stop-1-1](/assets/images/12/injectiontest8-stop-1-1.png)
 
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 
@@ -520,27 +520,27 @@ The fragmentation attack attempts to acquire the PRGA, just like the Korek ChopC
 
 **This attack uses packetforge-ng, a tool within aircrack-ng used to craft custom packets**
 
-- 
+-
 
 Put your wireless card in monitor mode ON THE SAME CHANNEL AS THE VICTIM AP (THIS IS A MUST):
 
 `airmon-ng start wlan0 3`
 
-![injectiontest5-1](/content/images/2019/12/injectiontest5-1.png)
+![injectiontest5-1](/assets/images/12/injectiontest5-1.png)
 
 The channel number goes at the end of the command, highlighted above.
 
-- 
+-
 
 Verify the card is in monitor mode by re-entering airmon-ng:
 
 `airmon-ng`
 
-![injectiontest3-1](/content/images/2019/12/injectiontest3-1.png)
+![injectiontest3-1](/assets/images/12/injectiontest3-1.png)
 
 The interface is changed from **wlan0** to **wlan0mon** indicating the wireless card was succesfully placed into monitoring mode.
 
-- 
+-
 
 Before the Fragmentation Attack is performed, you MUST perform a [Fake Authentication](#fakeauthentication) to the victim AP:
 
@@ -555,7 +555,7 @@ Before the Fragmentation Attack is performed, you MUST perform a [Fake Authentic
 
 This step is required to perform the fragmentation attack.
 
-- 
+-
 
 Perform the Fragmentation Attack:
 
@@ -565,7 +565,7 @@ Perform the Fragmentation Attack:
 
 This attack uses a packet to your router, typically from your own NIC because of the fake authentication attack, to reinject into the network and collect fragments of keying material to acquire the pseudo-random generating algorithm (PRGA). We use the PRGA to create an ARP packet in packetforge-ng to reinject into the network, thus, acquiring weak IVs. These IVs are used by aircrack-ng to acquire the WEP key.
 
-- 
+-
 
 Enter 'y' to use the packet:
 
@@ -575,7 +575,7 @@ Enter 'y' to use the packet:
 
 Once you select the packet, you will see a screen above until you acquire 1500 bytes of a keystream. Next we will use packetforge-ng to create a packet with this keystream and output it to a file.
 
-- 
+-
 
 Use packetforge-ng to create an ARP packet to use to reinject into the network:
 
@@ -595,7 +595,7 @@ Use packetforge-ng to create an ARP packet to use to reinject into the network:
 
 This is how you create an ARP packet in packetforge-ng.
 
-- 
+-
 
 Before we use the forged ARP packet to reinject into the network, use airodump-ng to output the keystream to a file and to track network communications:
 
@@ -609,7 +609,7 @@ Before we use the forged ARP packet to reinject into the network, use airodump-n
 
 Take note of the **data** column as it is the most important.
 
-- 
+-
 
 Use the [Interactive Packet Replay](#interactivepacketreplay) to reinject the ARP packet created above into the network:
 
@@ -628,7 +628,7 @@ At the time the packet is being reinjected, the data column will quickly rise. H
 
 ![fragmentation-airodump-final-1](/content/images/2020/01/fragmentation-airodump-final-1.png)
 
-- 
+-
 
 Use aircrack-ng on the _.cap_ file to acquire the WEP key:
 
@@ -640,13 +640,13 @@ Use aircrack-ng on the _.cap_ file to acquire the WEP key:
 
 The WEP Key (Router Password) has been found!
 
-- 
+-
 
 Turn off monitoring mode on the interface when complete with all activities:
 
 `airmon-ng stop wlan0mon`
 
-![injectiontest8-stop-1-1](/content/images/2019/12/injectiontest8-stop-1-1.png)
+![injectiontest8-stop-1-1](/assets/images/12/injectiontest8-stop-1-1.png)
 
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 
@@ -659,27 +659,27 @@ The Caffe Latte gets its name from the idea that you can perform this attack in 
 
 **START**
 
-- 
+-
 
 Put your wireless card in monitor mode ON THE SAME CHANNEL AS THE VICTIM AP (THIS IS A MUST):
 
 `airmon-ng start wlan0 3`
 
-![injectiontest5-1](/content/images/2019/12/injectiontest5-1.png)
+![injectiontest5-1](/assets/images/12/injectiontest5-1.png)
 
 The channel number goes at the end of the command, highlighted above.
 
-- 
+-
 
 Verify the card is in monitor mode by re-entering airmon-ng:
 
 `airmon-ng`
 
-![injectiontest3-1](/content/images/2019/12/injectiontest3-1.png)
+![injectiontest3-1](/assets/images/12/injectiontest3-1.png)
 
 The interface is changed from **wlan0** to **wlan0mon** indicating the wireless card was succesfully placed into monitoring mode.
 
-- 
+-
 
 Begin the Caffe Latte Attack by starting an airodump-ng capture and writing the keystream to an output file:
 
@@ -691,7 +691,7 @@ Begin the Caffe Latte Attack by starting an airodump-ng capture and writing the 
     -c: the channel the router is running on (3)
     -w: output the keystream to a file (caffe-latte-attack-key)
 
-- 
+-
 
 While an airodump-ng capture is running, perform the Caffe-Latte Attack:
 
@@ -714,7 +714,7 @@ After some time, usually at around 50,000 to 100,000 IVs (data column in airodum
 
 ![final-caffe-latte-deauth](/content/images/2020/01/final-caffe-latte-deauth.png)
 
-- 
+-
 
 Use aircrack-ng on the output keystream file from airodump-ng to acquire the WEP key:
 
@@ -726,13 +726,13 @@ Use aircrack-ng on the output keystream file from airodump-ng to acquire the WEP
 
 The key has been found!
 
-- 
+-
 
 Turn off monitoring mode on the interface when complete with all activities:
 
 `airmon-ng stop wlan0mon`
 
-![injectiontest8-stop-1-1](/content/images/2019/12/injectiontest8-stop-1-1.png)
+![injectiontest8-stop-1-1](/assets/images/12/injectiontest8-stop-1-1.png)
 
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 
@@ -745,27 +745,27 @@ The Hirte attack is simply an enhanced version of the Caffe Latte attack above. 
 
 **START**
 
-- 
+-
 
 Put your wireless card in monitor mode ON THE SAME CHANNEL AS THE VICTIM AP (THIS IS A MUST):
 
 `airmon-ng start wlan0 3`
 
-![injectiontest5-1](/content/images/2019/12/injectiontest5-1.png)
+![injectiontest5-1](/assets/images/12/injectiontest5-1.png)
 
 The channel number goes at the end of the command, highlighted above.
 
-- 
+-
 
 Verify the card is in monitor mode by re-entering airmon-ng:
 
 `airmon-ng`
 
-![injectiontest3-1](/content/images/2019/12/injectiontest3-1.png)
+![injectiontest3-1](/assets/images/12/injectiontest3-1.png)
 
 The interface is changed from **wlan0** to **wlan0mon** indicating the wireless card was succesfully placed into monitoring mode.
 
-- 
+-
 
 As with most attacks, start an airodump-ng capture to output the keystream:
 
@@ -777,7 +777,7 @@ As with most attacks, start an airodump-ng capture to output the keystream:
     --essid: the name of the SSID (DIR-615)
     -w: output the keystream to a file (hirte-attack-key)
 
-- 
+-
 
 Perform the Hirte Attack:
 
@@ -797,7 +797,7 @@ Perform the Hirte Attack:
 
 ![hirte-deauth](/content/images/2020/01/hirte-deauth.png)
 
-- 
+-
 
 Finally, use aircrack-ng to crack the WEP key:
 
@@ -811,13 +811,13 @@ After performing the above command, you should see the screen below:
 
 The key has been found!
 
-- 
+-
 
 Turn off monitoring mode on the interface when complete with all activities:
 
 `airmon-ng stop wlan0mon`
 
-![injectiontest8-stop-1-1](/content/images/2019/12/injectiontest8-stop-1-1.png)
+![injectiontest8-stop-1-1](/assets/images/12/injectiontest8-stop-1-1.png)
 
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 
@@ -830,43 +830,43 @@ The injection test should be the first attack performed in a wireless penetratio
 
 ##### Basic Injection Test:
 
-- 
+-
 
 Acquire your wireless card interface:
 
 `airmon-ng`
 
-![injectiontest1-1](/content/images/2019/12/injectiontest1-1.png)
+![injectiontest1-1](/assets/images/12/injectiontest1-1.png)
 
 The Interface column lists your wireless card interface name to be used for injection. In my case it is **wlan0**.
 
-- 
+-
 
 Put your wireless card in monitor mode:
 
 `airmon-ng start wlan0`
 
-![injectiontest2-1](/content/images/2019/12/injectiontest2-1.png)
+![injectiontest2-1](/assets/images/12/injectiontest2-1.png)
 
 Highlighted is the portion that successfully states the interface was placed into monitoring mode under a different interface name: **wlan0mon**. Don't worry about the processes that could cause trouble, it usually doesn't cause much hinderance. If it does, enter: `airmon-ng check kill` and enter the command above again.
 
-- 
+-
 
 Verify the card is in monitor mode by re-entering airmon-ng:
 
 `airmon-ng`
 
-![injectiontest3-1](/content/images/2019/12/injectiontest3-1.png)
+![injectiontest3-1](/assets/images/12/injectiontest3-1.png)
 
 The interface is changed from **wlan0** to **wlan0mon** indicating the wireless card was succesfully placed into monitoring mode.
 
-- 
+-
 
 Perform the basic injection test:
 
 `aireplay-ng -9 wlan0mon`
 
-![injectiontest4-1](/content/images/2019/12/injectiontest4-1.png)
+![injectiontest4-1](/assets/images/12/injectiontest4-1.png)
 
     * -9: injection test
 
@@ -874,13 +874,13 @@ The first 3 lines after the command are important. The first line states the wir
 
 At the very bottom there is the test router I have set up and useful information is given about the AP and it's state. It provides the AP MAC address, the channel it is on, and it's SSID name. It is also reveals how many ping requests were sent/received (30/30) and the ping latency. 30 out of 30 means there is a very strong antenna reception from the wireless card to the AP.
 
-- 
+-
 
 Turn off monitoring mode on the interface when complete with all activities:
 
 `airmon-ng stop wlan0mon`
 
-![injectiontest8-stop-1](/content/images/2019/12/injectiontest8-stop-1.png)
+![injectiontest8-stop-1](/assets/images/12/injectiontest8-stop-1.png)
 
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 
@@ -888,53 +888,53 @@ Whenever you are done with activities, ensure to stop the monitor mode. The high
 
 If you are in a sensitive environment where you don't want to go throwing out random packet injections or already know the AP you are attacking, I recommend doing this injection test instead.
 
-- 
+-
 
 Acquire your wireless card interface:
 
 `airmon-ng`
 
-![injectiontest1-1](/content/images/2019/12/injectiontest1-1.png)
+![injectiontest1-1](/assets/images/12/injectiontest1-1.png)
 
 The Interface column lists your wireless card interface name to be used for injection. In my case it is **wlan0**.
 
-- 
+-
 
 Put your wireless card in monitor mode ON THE SAME CHANNEL AS THE VICTIM AP (THIS IS A MUST):
 
 `airmon-ng start wlan0 3`
 
-![injectiontest5-1](/content/images/2019/12/injectiontest5-1.png)
+![injectiontest5-1](/assets/images/12/injectiontest5-1.png)
 
 I highlighted the extra flag after the command indicating how to alter the channel, in my case, the AP is on channel 3 (this was acquired above). The box below indicates a successful enablement of monitor mode.
 
-- 
+-
 
 Verify the card is in monitor mode by re-entering airmon-ng:
 
 `airmon-ng`
 
-![injectiontest3-1](/content/images/2019/12/injectiontest3-1.png)
+![injectiontest3-1](/assets/images/12/injectiontest3-1.png)
 
 The interface is changed from **wlan0** to **wlan0mon** indicating the wireless card was succesfully placed into monitoring mode.
 
-- 
+-
 
 Enter the following command to check for the frequency and channel your wireless card is on for verification:
 
 `iwlist wlan0mon frequency`
 
-![injectiontest6-1](/content/images/2019/12/injectiontest6-1.png)
+![injectiontest6-1](/assets/images/12/injectiontest6-1.png)
 
 The box below indicates the frequency is 2.422 GHz, which is channel 3.
 
-- 
+-
 
 Perform the directed injection test:
 
 `aireplay-ng -9 -e DIR-615 -a 00:18:E7:EA:2A:53 wlan0mon`
 
-![injectiontest7](/content/images/2019/12/injectiontest7.png)
+![injectiontest7](/assets/images/12/injectiontest7.png)
 
     -9: injection test
     -e: the ESSID of the AP (DIR-615)
@@ -942,13 +942,13 @@ Perform the directed injection test:
 
 The output shows that the injection is working and a ping of the AP results in (min/avg/max) latency and 30/30 indicates there was no packet loss - an excellent connection.
 
-- 
+-
 
 Turn off monitoring mode on the interface when complete with all activities:
 
 `airmon-ng stop wlan0mon`
 
-![injectiontest8-stop-1-1](/content/images/2019/12/injectiontest8-stop-1-1.png)
+![injectiontest8-stop-1-1](/assets/images/12/injectiontest8-stop-1-1.png)
 
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 

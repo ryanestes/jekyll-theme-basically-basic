@@ -39,9 +39,9 @@ The Wi-Fi Alliance quickly pushed out WPA to quickly fix the vulnerabilities of 
 
 The two figures below were taken from the [Clear To Send Podcast](cleartosend.net) and describe the 4-way handshake:
 
-![4-way-1](/content/images/2020/03/4-way-1.png)
+![4-way-1](/assets/images/03/4-way-1.png)
 
-![4-way-2](/content/images/2020/03/4-way-2.png)
+![4-way-2](/assets/images/03/4-way-2.png)
 
 Lastly, there are two main modes of WPA/WPA2 - Personal and Enterprise. Personal is the typical hexadecimal or alphanumeric passphrase. Enterprise uses the router as an authenticating controller in front of an authenticating server, usually a RADIUS server; but Enterprise is out of scope for this post. This post will cover how to crack WPA/WPA2 personal encrypted Wi-Fi networks. To do this, we will capture the 4-way handshake with Aircrack-ng and brute force the passphrase by presenting the 4-way handshake for each passphrase attempt. Let's get started with the proof of concept. It is far simpler than WEP, thankfully.
 
@@ -81,43 +81,43 @@ The first step of the attack is to first choose or be given an access point with
 
 **START**
 
-- 
+-
 
 Find out the name of your wireless card interface using airmon-ng:
 
 `airmon-ng`
 
-![final-wpa-1](/content/images/2020/03/final-wpa-1.png)
+![final-wpa-1](/assets/images/03/final-wpa-1.png)
 
 The interface name is "wlan0"
 
-- 
+-
 
 Put your wireless card in monitor mode ON THE SAME CHANNEL AS THE VICTIM AP (THIS IS A MUST):
 
 'airmon-ng start wlan0 11'
 
-![final-wpa-2](/content/images/2020/03/final-wpa-2.png)
+![final-wpa-2](/assets/images/03/final-wpa-2.png)
 
 The channel number goes at the end of the command, highlighted above.
 
-- 
+-
 
 Use airmon-ng again to ensure the interface name has been changed:
 
 `airmon-ng`
 
-![final-wpa-3](/content/images/2020/03/final-wpa-3.png)
+![final-wpa-3](/assets/images/03/final-wpa-3.png)
 
 It is "wlan0mon".
 
-- 
+-
 
 Perform a packet capture of the victim router and output it to a file using airodump-ng:
 
 `airodump-ng -c 11 -d 00:18:E7:EA:28:87 -w WPA-WPA2-Output wlan0mon`
 
-![wpa-2](/content/images/2020/03/wpa-2.png)
+![wpa-2](/assets/images/03/wpa-2.png)
 
     -c: The channel to filter on (11)
     -d: The MAC address of the victim router (00:18:E7:EA:28:87)
@@ -125,37 +125,37 @@ Perform a packet capture of the victim router and output it to a file using airo
 
 The following window should appear but with your specifications:
 
-![wpa-3](/content/images/2020/03/wpa-3.png)
+![wpa-3](/assets/images/03/wpa-3.png)
 
 **KEEP THIS WINDOW RUNNING TO WAIT FOR THE 4-WAY HANDSHAKE!!!**
 
-- 
+-
 
 The first step is to capture the 4-way handshake. To do this we will deauthenticate a client using the [deauthentication attack](/hacking-a-wep-encrypted-wireless-access-point-using-the-aircrack-ng-suite/#deauthentication) and capture the handshake when they reauthenticate:
 
 `aireplay -0 1 -a 00:18:E7:EA:28:87 -c 00:04:4B:59:10:88 wlan0mon`
 
-![wpa-4](/content/images/2020/03/wpa-4.png)
+![wpa-4](/assets/images/03/wpa-4.png)
 
 Pictured above is the output of a successful deauthentication attack against the victim router, of a victim client. The client I deauthenticated was an Android tablet I had. The picture below shows the output of the airodump-ng menu when the client is deauthenticated and the 4-way handshake is subsuqeuently captured. The highlighted box shows the output of a successful handshake capture.
 
-![final-wpa-7](/content/images/2020/03/final-wpa-7.png)
+![final-wpa-7](/assets/images/03/final-wpa-7.png)
 
 Once the handshake is captured we can begin the brute force attack. For this attack we will use a wordlist that comes with Kali Linux on the cap file.
 
-- 
+-
 
 This final step uses aircrack-ng to brute force the password on the router:
 
 `aircrack-ng -w ../usr/share/wordlists/rockyou.txt WPA-WPA2-Output-01.cap`
 
-![wpa-6](/content/images/2020/03/wpa-6.png)
+![wpa-6](/assets/images/03/wpa-6.png)
 
     -w: the wordlist file path (../usr/share/wordlists/rockyou.txt) or (path/to/file)
 
 - Finally, below is the output of a successful key capture on the cap file
 
-![final-wpa-9](/content/images/2020/03/final-wpa-9.png)
+![final-wpa-9](/assets/images/03/final-wpa-9.png)
 
 Notice that the attack took 48 minutes and 54 seconds. This isn't particularly unusual so be prepared for that. However, this depends on your machine and wordlist file size you use. I am on a VM itterating through a massive text file.
 

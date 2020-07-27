@@ -59,11 +59,11 @@ _The version used in this post is **VirtualBox 6.1.8** _
 You can install the latest version of VirtualBox here:  
 [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
 
-![VB-1-1](/content/images/2020/05/VB-1-1.png)
+![VB-1-1](/assets/images/05/VB-1-1.png)
 
 Since I am running Windows 10, I will choose **Windows hosts**. Once, you have Virtualbox up and running, you can move on to install the operating system of your choosing. I would highly recommend becoming familiar with th interface and read the [Virtualbox manual](https://www.virtualbox.org/manual/) if you have not used VirtualBox before. You should see this window before proceeding:
 
-![VB-2](/content/images/2020/05/VB-2.png)
+![VB-2](/assets/images/05/VB-2.png)
 
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 ### ISO vs OVA vs OVF
@@ -101,13 +101,13 @@ Kali Linux (previously BackTrack Linux) is a debian-based Linux distro most noto
 You can download the Kali Linux .iso images here:  
 [https://www.kali.org/downloads/](https://www.kali.org/downloads/)
 
-![VB-3](/content/images/2020/05/VB-3.png)
+![VB-3](/assets/images/05/VB-3.png)
 
 Once you have VirtualBox and the ISO installed, follow these steps:
 
 1. Open VirtualBox Manager and click on the **New** button to create a new virtual machine
 
-![VB-Kali-ISO-1](/content/images/2020/05/VB-Kali-ISO-1.png)
+![VB-Kali-ISO-1](/assets/images/05/VB-Kali-ISO-1.png)
 
 1. Alter the following fields and then click **Next** :
 
@@ -116,61 +116,61 @@ Once you have VirtualBox and the ISO installed, follow these steps:
 - **Type** : This is a Linux operating system so select **Linux**
 - **Version** : Kali is based on the Debian kernel, so select **Debian** and your appropriate bit version.
 
-![VB-Kali-ISO-2](/content/images/2020/05/VB-Kali-ISO-2.png)
+![VB-Kali-ISO-2](/assets/images/05/VB-Kali-ISO-2.png)
 
 1. Kali Linux recommends a minimum of 2GB of RAM for optimal performance, change the RAM to **2048** MB (2 GB).
 
-![VB-Kali-ISO-3](/content/images/2020/05/VB-Kali-ISO-3.png)
+![VB-Kali-ISO-3](/assets/images/05/VB-Kali-ISO-3.png)
 
 1. This step in the process is for virtual machine hard disk creation. Don't change anything (Create a virtual hard disk now) and click **Create**
 
-![VB-Kali-ISO-4](/content/images/2020/05/VB-Kali-ISO-4.png)
+![VB-Kali-ISO-4](/assets/images/05/VB-Kali-ISO-4.png)
 
 1. When you create a new virtual hard disk it will ask you what type you want - VDI, VHD, or VMDK. I won't go over the differences, but if you want a little overview here is information from the VirtualBox manual on the matter (I use VMDK):
 
 [https://www.virtualbox.org/manual/ch05.html#vdidetails](https://www.virtualbox.org/manual/ch05.html#vdidetails)
 
-![VB-Kali-ISO-5](/content/images/2020/05/VB-Kali-ISO-5.png)
+![VB-Kali-ISO-5](/assets/images/05/VB-Kali-ISO-5.png)
 
 1. This step pertains to how data is stored from the virtual machine, whether it is dynamically created or to statically allocate it beforehand and store data as necessary. There is now an option to partition storage into less than 2GB chunks as well. The most popular and recommended action is to select **Dynamically allocated** (don't change anything) and click **Next**.
 
-![VB-Kali-ISO-6](/content/images/2020/05/VB-Kali-ISO-6.png)
+![VB-Kali-ISO-6](/assets/images/05/VB-Kali-ISO-6.png)
 
 1. The final step in the inital setup process is to allocate hard drive space for storage from the virtual machine. Kali Linux recommended **20GB** so thats what I will begin with. Click **Create**.
 
-![VB-Kali-ISO-7](/content/images/2020/05/VB-Kali-ISO-7.png)
+![VB-Kali-ISO-7](/assets/images/05/VB-Kali-ISO-7.png)
 
 1. Once the machine is created you will now have a vanilla Debian Linux operating system, but it is not yet Kali Linux. You need to add the ISO file as a boot option. Click **Settings** when your virtual machine is selected onthe left.
 
-![VB-Kali-ISO-8](/content/images/2020/05/VB-Kali-ISO-8.png)
+![VB-Kali-ISO-8](/assets/images/05/VB-Kali-ISO-8.png)
 
 1. Then, click **Storage** on the left-hand side column.
 
-![VB-Kali-ISO-9](/content/images/2020/05/VB-Kali-ISO-9.png)
+![VB-Kali-ISO-9](/assets/images/05/VB-Kali-ISO-9.png)
 
 1. Click on the small icon next to _Controller: IDE_ that looks like a disk with a green plus sign (Adds optical drive).
 
-![VB-Kali-ISO-10](/content/images/2020/05/VB-Kali-ISO-10.png)
+![VB-Kali-ISO-10](/assets/images/05/VB-Kali-ISO-10.png)
 
 1. Click on the **Add** button and the directory to your local machine will appear. Find the Kali Linux iso you downloaded prior to this.
 
-![VB-Kali-ISO-11](/content/images/2020/05/VB-Kali-ISO-11.png)
+![VB-Kali-ISO-11](/assets/images/05/VB-Kali-ISO-11.png)
 
 1. Once you have found the file, click **Choose**.
 
-![VB-Kali-ISO-12](/content/images/2020/05/VB-Kali-ISO-12.png)
+![VB-Kali-ISO-12](/assets/images/05/VB-Kali-ISO-12.png)
 
 1. You should see an entry under the **Controller: IDE** Storage Device. Click **OK**.
 
-![VB-Kali-ISO-13](/content/images/2020/05/VB-Kali-ISO-13.png)
+![VB-Kali-ISO-13](/assets/images/05/VB-Kali-ISO-13.png)
 
 1. At this point the virtual machine is completely set up. You will have to run the first time installer. Click **Start**.
 
-![VB-Kali-ISO-14](/content/images/2020/05/VB-Kali-ISO-14.png)
+![VB-Kali-ISO-14](/assets/images/05/VB-Kali-ISO-14.png)
 
 1. Select **Graphic Install** or whichever install option you prefer. Then walk through all of the set up prompts until you are met with the desktop. If you are unsure of an answer, the likely thing you should do is to just leave it blank and continue, where applicable.
 
-![VB-Kali-ISO-15](/content/images/2020/05/VB-Kali-ISO-15.png)
+![VB-Kali-ISO-15](/assets/images/05/VB-Kali-ISO-15.png)
 
 The default username and password is: **root:toor**
 
@@ -179,7 +179,7 @@ The default username and password is: **root:toor**
 You can download the Kali Linux .ova images here:  
 [https://www.offensive-security.com/kali-linux-vm-vmware-virtualbox-image-download/](https://www.offensive-security.com/kali-linux-vm-vmware-virtualbox-image-download/)
 
-![VB-4](/content/images/2020/05/VB-4.png)
+![VB-4](/assets/images/05/VB-4.png)
 
 This step requires you to install the VirtualBox Extension Pack, which is recommended for the ISO version as well. Download it, run it, and follow the quick installation prompts. You can install the extension pack here:  
 [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
@@ -188,27 +188,27 @@ Once you have VirtualBox and the ISO installed, follow these steps:
 
 1. Open VirtualBox Manager and click on the **Import** button to import a new virtual machine.
 
-![VB-Kali-OVA-1](/content/images/2020/05/VB-Kali-OVA-1.png)
+![VB-Kali-OVA-1](/assets/images/05/VB-Kali-OVA-1.png)
 
 1. Click the small folder with a green arrow icon to select a virtual appliance to import.
 
-![VB-Kali-OVA-2](/content/images/2020/05/VB-Kali-OVA-2.png)
+![VB-Kali-OVA-2](/assets/images/05/VB-Kali-OVA-2.png)
 
 1. Find your .ova Kali Linux file that you downloaded prior, then select **Next**.
 
-![VB-Kali-OVA-3](/content/images/2020/05/VB-Kali-OVA-3.png)
+![VB-Kali-OVA-3](/assets/images/05/VB-Kali-OVA-3.png)
 
 1. The next screen shows a summary of all of the specifications defined by your system and the .ova file definitions. Make sure everything is correct (including the _Machine Base Folder_) and click **Import**.
 
-![VB-Kali-OVA-4](/content/images/2020/05/VB-Kali-OVA-4.png)
+![VB-Kali-OVA-4](/assets/images/05/VB-Kali-OVA-4.png)
 
 1. Accept the Software License Agreement.
 
-![VB-Kali-OVA-5](/content/images/2020/05/VB-Kali-OVA-5.png)
+![VB-Kali-OVA-5](/assets/images/05/VB-Kali-OVA-5.png)
 
 1. At this point the Kali Linux virtual machine is completely imported. Click **Start**.
 
-![VB-Kali-OVA-6](/content/images/2020/05/VB-Kali-OVA-6.png)
+![VB-Kali-OVA-6](/assets/images/05/VB-Kali-OVA-6.png)
 
 The default username and password is: **root:toor**
 
@@ -238,56 +238,56 @@ Once the ZIP file is downloaded and extracted, follow these simple steps to impo
 
 1. Open the VirtualBox Manager and click the **Import** button.
 
-![VB-Windows-1](/content/images/2020/05/VB-Windows-1.png)
+![VB-Windows-1](/assets/images/05/VB-Windows-1.png)
 
 1. Click the icon that looks like a folder with a green up arrow on it to select the OVA file from your local machine.
 
-![VB-Windows-2](/content/images/2020/05/VB-Windows-2.png)
+![VB-Windows-2](/assets/images/05/VB-Windows-2.png)
 
 1. Once you find the OVA file you downloaded prior, Click **Next**.
 
-![VB-Windows-3](/content/images/2020/05/VB-Windows-3.png)
+![VB-Windows-3](/assets/images/05/VB-Windows-3.png)
 
 1. VirtualBox will then show you a summary of the configurations set by the virtual appliance file. Click **Import** if everything looks fine.
 
-![VB-Windows-4](/content/images/2020/05/VB-Windows-4.png)
+![VB-Windows-4](/assets/images/05/VB-Windows-4.png)
 
 1. At this point, the virtual machine is completely imported. I like to **Start** it to make sure everything works before making a Snapshot.
 
 **NOTE** : It is also wise to install any tools or configurations you want established before taking a snapshot. Then, once you revert back you will still have your tools fresh and ready to go. For example, If I was creating this virtual machine for network packet analysis, I would download and install Wireshark before creating a Snapshot for the virtual machine.
 
-![VB-Windows-5](/content/images/2020/05/VB-Windows-5.png)
+![VB-Windows-5](/assets/images/05/VB-Windows-5.png)
 
-![VB-Windows-6](/content/images/2020/05/VB-Windows-6.png)
+![VB-Windows-6](/assets/images/05/VB-Windows-6.png)
 
 #### Snapshot
 
 1. Once you have all of the applications and tools installed on your machine you are ready to take a snapshot. Go back to the VirtualBox Manager and right click the virtual machine you're running, go to **Close** and **Power Off**.
 
-![VB-Windows-7](/content/images/2020/05/VB-Windows-7.png)
+![VB-Windows-7](/assets/images/05/VB-Windows-7.png)
 
 1. Then click **Power Off** on the proceeding modal.
 
-![VB-Windows-8](/content/images/2020/05/VB-Windows-8.png)
+![VB-Windows-8](/assets/images/05/VB-Windows-8.png)
 
 1. To take a snapshot, click on the icon next to the virtual machine you are trying to take a snapshot of. It looks like three bullet points with 3 lines of information.
 
-![VB-Windows-9](/content/images/2020/05/VB-Windows-9.png)
+![VB-Windows-9](/assets/images/05/VB-Windows-9.png)
 
 1. Click **Snapshots** on the menu that opens.
 
-![VB-Windows-10](/content/images/2020/05/VB-Windows-10.png)
+![VB-Windows-10](/assets/images/05/VB-Windows-10.png)
 
 1. Click on the **Take** icon that looks like a camera with a green plus sign.
 
-![VB-Windows-11](/content/images/2020/05/VB-Windows-11.png)
+![VB-Windows-11](/assets/images/05/VB-Windows-11.png)
 
 1. Name the snapshot something meaningful and make a description if necessary. I just name mine something like _clean_ or _fresh_.
 
-![VB-Windows-12](/content/images/2020/05/VB-Windows-12.png)
+![VB-Windows-12](/assets/images/05/VB-Windows-12.png)
 
 1. That's it! Once your 90 day license expires or if you break the machine, just return to this screen and click **Restore** to revent the machine state back to this point.
 
-![VB-Windows-13](/content/images/2020/05/VB-Windows-13.png)
+![VB-Windows-13](/assets/images/05/VB-Windows-13.png)
 
 <!--kg-card-end: markdown-->

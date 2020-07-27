@@ -43,19 +43,19 @@ Once you have Kali Linux on your Virtualbox, begin here:
 
 1. Go to _Settings_ in the VM manager
 
-![Setup_WiFi_1](/content/images/2019/12/Setup_WiFi_1.png)
+![Setup_WiFi_1](/assets/images/12/Setup_WiFi_1.png)
 
 1. Go to the _USB_ tab and check the box next to your wireless USB adapter to ensure it is enabled. If you have several, make sure it is the top one on the list by using the buttons to the right. The chipset number usually is the best indicator to know which wireless adapter you need to enable.
 
-![Setup_WiFi_2](/content/images/2019/12/Setup_WiFi_2.png)
+![Setup_WiFi_2](/assets/images/12/Setup_WiFi_2.png)
 
 1. Go to _Network_ and on the _Adapter 1_ tab, enable the network adapter and select _Bridged Adapter_. From there, select your wireless adapter and click the advanced down arrow. Ensure promiscuous mode is enabled (I just _Allow all_ for this case)
 
-![Setup_WiFi_3](/content/images/2019/12/Setup_WiFi_3.png)
+![Setup_WiFi_3](/assets/images/12/Setup_WiFi_3.png)
 
 1. Start the Kali Linux VM, login and check if the wireless adapter is properly setup and is detected by typing `iwconfig`.
 
-![iwconfig](/content/images/2019/12/iwconfig.png)
+![iwconfig](/assets/images/12/iwconfig.png)
 
 NOTE: You can use the ieee80211 wireless stack (`ifconfig`) but the more modern mac80211 wireless stack (`iwconfig` or `iw`) should be used and provides more wireless information by default.
 

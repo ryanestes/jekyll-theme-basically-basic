@@ -76,7 +76,7 @@ HSTS seems coincidentally in response to a presentation in 2009 at Black Hat DC 
 
 sslstrip2, sslstrip's predecessor, exploits HSTS by placing a proxy between the communications of the client and the server. A screenshot from his presentation shows what this looks like:
 
-![SSLStrip](/content/images/2019/08/SSLStrip.png)
+![SSLStrip](/assets/images/08/SSLStrip.png)
 
 A user sending HTTPS traffic to a web server can be manipulated via a MitM attack to redirect to an HTTP equivalent (e.g. [https://facebook.com](https://facebook.com) would redirect to [http://facebook.com](http://facebook.com)). The extent of the threat landscape doesn't stop at just domains, sslstrip(2) can also strip secure cookies which hold session keys, unique identifiers, and any other information developers decide to put in.
 

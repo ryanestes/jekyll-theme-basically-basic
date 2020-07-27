@@ -16,7 +16,7 @@ On August 12th, 2019 I began studying for the Penetration Testing Student (PTS) 
 <!--kg-card-end: markdown-->
 
 I can't say enough good things about the PTS course. It was exactly what I was looking for as an intermediate IT professional looking to dive into the world of penetration testing (Although I previously completed the OSWP certification). The PTS course is advertised as "Tailored for Beginners" and covers the basics of networking, routing, information gathering techniques. buffer overflows, various web application attacks, SQLi, pcap analysis, password cracking, data exfiltration, and a lot more. In fact, eLearnSecurity doesn't hide the contents of the course, as other courses may do. You know exactly what you're getting and what you're getting yourself into. They even allow you to test drive each course they offer for free, which is an entire section of slides to provide preliminary understanding of how they deliver the course content. There are little to no curveballs, eLearnSecurity just wants to concisely provide the knowledge and it is up to the student to learn and practice the hands-on material.  
-  
+
 The entire PTSv4 course syllabus can be found here: [https://dsxte2q2nyjxs.cloudfront.net/Syllabus\_PTSV4.pdf](https://dsxte2q2nyjxs.cloudfront.net/Syllabus_PTSV4.pdf)
 
 <!--kg-card-begin: markdown-->
@@ -29,7 +29,7 @@ Once I solidified the course content and it's delivery was something I could get
 
 Here is a screenshot of the above link:
 
-![PTSv4_eJPT_Tiers](/content/images/2019/12/PTSv4_eJPT_Tiers.png)
+![PTSv4_eJPT_Tiers](/assets/images/12/PTSv4_eJPT_Tiers.png)
 
 I decided to purchase the PTS Elite tier (the top tier) and added the unlimited lab time. This is actually a critical step and should be thouroughly thought through as to what tier you should get because I don't believe add-ons or tier upgrades are an option after purchase, but I'm not certain. The primary reason I purchased this tier was because of the PDF format and additional 3 black-box penetration testing labs features provided.
 
@@ -55,7 +55,7 @@ With that being said, the meat of the course contains 6 thourough modules and a 
 
 The course content was amazing, and I won't harp on it too much here because the depth I can go into for the course is outlined in the syllabus. I don't want to get granular and spoil the course for propspective students. I will say that the course author(s) definitely provided worthwhile content and walks you through every step to avoid confusion and to level the playing ground for all of those taking the course. Most of the modules come with external resources for examples and accompanying labs to practice the lessons hands-on. Lastly, the interface is extremely simple and modern and it's definitely one of the great things about the course overall. So kudos to eLearnSecurity for that. Here is a screenshot of the interface as I have left it after the course. (I didn't need to practice or go through all of the modules because of prior information I already know and didn't feel the need to go through int he course)
 
-![pts_course_interface](/content/images/2019/12/pts_course_interface.png)
+![pts_course_interface](/assets/images/12/pts_course_interface.png)
 
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 #### eJPT Exam Review
@@ -69,4 +69,4 @@ Similar to any other certification, I won't discuss the scpecifics of the exam a
 
 The eJPT certification and corresponding PTS v4 course filled in quite a few knowledge gaps that I didn't know before and solidified my understanding on others. I would recommend this course for someone who is looking to get into penetration testing, as a precursor to other eLearnSecurity courses, or a foundation exam to take before the PTP or even the OSCP. Thank you for following along.
 
-<figure class="kg-card kg-image-card"><img src="/content/images/2019/12/eJPT-Cert.png" class="kg-image"></figure>
+<figure class="kg-card kg-image-card"><img src="/assets/images/12/eJPT-Cert.png" class="kg-image"></figure>

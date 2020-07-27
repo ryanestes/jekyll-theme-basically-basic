@@ -61,55 +61,55 @@ The first step to recreate this challenge is to acquire the sufficient applicati
 
 - After downloading the executable, run it and follow the command prompts. The only change you should have to make in the install wizard is perhaps the port number, but the port number for FileZilla is pretty high (14147) so it shouldn't interfere with other connections. After following the modals, you will be presented with the server dashboard:
 
-![1-FileZilla-Server](/content/images/2020/03/1-FileZilla-Server.png)
+![1-FileZilla-Server](/assets/images/03/1-FileZilla-Server.png)
 
 ##### Add User to FileZilla
 
 - Once FileZilla is successfully installed, we need to create a simple user for authentication. To Perform this in a FileZilla Server click on **Edit -\> Users**
 
-![2-FileZilla-Edit-Users-1](/content/images/2020/03/2-FileZilla-Edit-Users-1.png)
+![2-FileZilla-Edit-Users-1](/assets/images/03/2-FileZilla-Edit-Users-1.png)
 
 - A new window will appear. Ensure the **General** page is chosen on the right-hand side of the window and click on **Add** on the right-hand side of the window. I have the button highlighted in the window below:
 
-![3-FileZilla-Add-User](/content/images/2020/03/3-FileZilla-Add-User.png)
+![3-FileZilla-Add-User](/assets/images/03/3-FileZilla-Add-User.png)
 
 - Another very small window should appear to add a user and add them to a corresponding group. Add a name for a user. There is no need to add the user to the group for this exercise. Click **OK**.
 
-![4-FileZilla-ryan](/content/images/2020/03/4-FileZilla-ryan.png)
+![4-FileZilla-ryan](/assets/images/03/4-FileZilla-ryan.png)
 
 ##### FileZilla Shared Folder
 
 - A shared folder is required for each user in order for FileZilla to function. Additionally, one of these shared folders _must_ be a home directory. I simply created a folder on my desktop and set it as the home directory for my simple user. In that folder I created the CTF word document that will be used for the PCAP file carving. So, quickly create a folder in the destination of your choice where you can easily find it (I just put mine on my Desktop). **Right-click** on any open location on your desktop; hover over **New** and the click on **Folder**. Name it what you want:
 
-![5-new-folder](/content/images/2020/03/5-new-folder.png)
+![5-new-folder](/assets/images/03/5-new-folder.png)
 
-![6-ctf-folder](/content/images/2020/03/6-ctf-folder.png)
+![6-ctf-folder](/assets/images/03/6-ctf-folder.png)
 
 - Return to FileZilla and in the same **Users** window, click **Shared Folders** on the left-hand side under the **Page:** text box.
 
-![7-shared-folder-add](/content/images/2020/03/7-shared-folder-add.png)
+![7-shared-folder-add](/assets/images/03/7-shared-folder-add.png)
 
 - Click on **Add** under the Shared Folders text box. It is highlighted below:
 
-![8-shared-folder-add-button](/content/images/2020/03/8-shared-folder-add-button.png)
+![8-shared-folder-add-button](/assets/images/03/8-shared-folder-add-button.png)
 
 - Locate the folder you just created, select it and press **OK** :
 
-![9-shared-folder-locate](/content/images/2020/03/9-shared-folder-locate.png)
+![9-shared-folder-locate](/assets/images/03/9-shared-folder-locate.png)
 
 - The folder will be the only one for the FileZilla and thus, the application will select it as the home directory by default. Click **OK** in the bottom left of the **Users** window to close it, finally.
 
-![10-shared-folder-OK](/content/images/2020/03/10-shared-folder-OK.png)
+![10-shared-folder-OK](/assets/images/03/10-shared-folder-OK.png)
 
 ##### Ensure SSL/TLS encryption is OFF
 
 - FileZilla actually doesn't have SSL/TLS encryption on by default. To perform this post, ensure this is still off, or, if you currently use FileZilla, turn it off. Check this by going to **Edit -\> Settings** :
 
-![11-FileZilla-Settings](/content/images/2020/03/11-FileZilla-Settings.png)
+![11-FileZilla-Settings](/assets/images/03/11-FileZilla-Settings.png)
 
 - On the left side of the window that appears, select **FTP over TLS settings**
 
-![12-FileZilla-SSLTLS](/content/images/2020/03/12-FileZilla-SSLTLS.png)
+![12-FileZilla-SSLTLS](/assets/images/03/12-FileZilla-SSLTLS.png)
 
 - Ensure the checkbox next to **Enable FTP over TLS Supprt (FTPS)** is NOT selected. Click **OK**. We are done for FileZilla for now, so minimize it or move it aside.
 
@@ -142,19 +142,19 @@ All of the initial preperation work is done, for the most part. The only prepera
 
 - Here are the contents of the file, it's location in the shared folder I designated in FileZilla earlier, and the properties to determine the file type (.docx)
 
-![13-Secret-File-Contents](/content/images/2020/03/13-Secret-File-Contents.png)
+![13-Secret-File-Contents](/assets/images/03/13-Secret-File-Contents.png)
 
-![14-Secret-File-Directory](/content/images/2020/03/14-Secret-File-Directory.png)
+![14-Secret-File-Directory](/assets/images/03/14-Secret-File-Directory.png)
 
-![15-Secret-File-Properties](/content/images/2020/03/15-Secret-File-Properties.png)
+![15-Secret-File-Properties](/assets/images/03/15-Secret-File-Properties.png)
 
 #### Creating the PCAP
 
 - Set up your Desktop so that you can see **WinSCP** and **Wireshark**. Also ensure your Filezilla server is on and running (I just minimize it):
 
-![16-Desktop](/content/images/2020/03/16-Desktop.png)
+![16-Desktop](/assets/images/03/16-Desktop.png)
 
-- 
+-
 
 Login to the FileZilla FTP server using WinSCP. If you are following along you will need to enter the following or make the following changes:
 
@@ -167,39 +167,39 @@ Login to the FileZilla FTP server using WinSCP. If you are following along you w
 
 Here is my window right before logging in:
 
-![17-WinSCP-Login](/content/images/2020/03/17-WinSCP-Login.png)
+![17-WinSCP-Login](/assets/images/03/17-WinSCP-Login.png)
 
 If you have no password just press **OK** again.
 
-![17-WinSCP-Login-2](/content/images/2020/03/17-WinSCP-Login-2.png)
+![17-WinSCP-Login-2](/assets/images/03/17-WinSCP-Login-2.png)
 
 - Once you login you will see a screen similar to the one below. The left side is the client (upload files), the right-hand side is the server (download). We are only interested in the right-hand side. Although, you can carve out files from an upload or a download!:
 
-![18-WinSCP-Dash](/content/images/2020/03/18-WinSCP-Dash.png)
+![18-WinSCP-Dash](/assets/images/03/18-WinSCP-Dash.png)
 
 - Now, to make a concise PCAP, you may have to do this fast depending on the traffic going through your loopback adapter. It will work regardless because we are searching for a specific packet regardless. To begin the PCAP, start your loopback adapter interface on Wireshark (or whatever interface you need to use that your FileZilla is connected to):
 
-![19-Wireshark_interface](/content/images/2020/03/19-Wireshark_interface.png)
+![19-Wireshark_interface](/assets/images/03/19-Wireshark_interface.png)
 
 - This step is the step in which we start Wireshark, download a file from the FTP server with our test user, and stop the capture. Follow these precise steps to get a quick PCAP of the FTP download. If you have been running a capture with Wireshark, click the _Green Shark Fin_ button at the top left of the window and _Restart Current Capture_.
 
-![20-restart-capture](/content/images/2020/03/20-restart-capture.png)
+![20-restart-capture](/assets/images/03/20-restart-capture.png)
 
 - Click **Continue Without Saving** if you don't want to save the capture
 
-![20-restart-capture-2](/content/images/2020/03/20-restart-capture-2.png)
+![20-restart-capture-2](/assets/images/03/20-restart-capture-2.png)
 
 - Pivot over to WinSCP, select the file _on the right-hand side of WinSCP_ and click the Download button right above (or press F5):
 
-![21-WinSCP-Download](/content/images/2020/03/21-WinSCP-Download.png)
+![21-WinSCP-Download](/assets/images/03/21-WinSCP-Download.png)
 
 - Wait a few seconds and then stop the Wireshark capture by clicking the _Red Box_ on the top left of the Wireshark window. You can also monitor the PCAP and wait for the specific packet, if you know what you are looking for, and then immediately stop the capture.
 
-![22-stop-capture](/content/images/2020/03/22-stop-capture.png)
+![22-stop-capture](/assets/images/03/22-stop-capture.png)
 
 - Finally, save the PCAP file by going to **File -\> Save As...**
 
-![23-pcap-save](/content/images/2020/03/23-pcap-save.png)
+![23-pcap-save](/assets/images/03/23-pcap-save.png)
 
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 ### File Detection
@@ -207,7 +207,7 @@ If you have no password just press **OK** again.
 
 Finally, time for the fun stuff. This section is very short and shows how to pinpoint FTP data from other data in a nonencrypted FTP Wireshark PCAP. The process is very trivial, just look for the packet that has the Protocol column labeled **FTP-DATA**. Other FTP traffic such as authentication and directory changes are labeled as **FTP**. You could also just use a Display Filter at the top of Wireshark and type in "ftp-data" to filter this packet. I removed the color labeling in Wireshark to pinpoint this packet easier. Below is the PCAP of the FTP traffic and I have highlighted the packet in question:
 
-![24-FTP-DATA](/content/images/2020/03/24-FTP-DATA.png)
+![24-FTP-DATA](/assets/images/03/24-FTP-DATA.png)
 
 You can see on the same row that the file the user downloaded is actually displayed in the packet info. The user downloaded " **Ryans\_Personal\_Information.docx**", which was **11936 bytes**. Now lets see what's in this file!
 
@@ -229,35 +229,35 @@ With that being said, perform the following steps to be able to carve out this d
 
 - Right click the FTP-DATA packet in question and select **Follow -\> TCP Stream** (Ctrl + Alt + Shift + T)
 
-![26-Follow-TCPStream](/content/images/2020/03/26-Follow-TCPStream.png)
+![26-Follow-TCPStream](/assets/images/03/26-Follow-TCPStream.png)
 
 - A window with a bunch of jargon will appear. At the bottom, change the dropdown box where is says "Show and save data as", from **ASCII** to **Hex Dump**
 
-![27-Follow-TCPStream-Hex](/content/images/2020/03/27-Follow-TCPStream-Hex.png)
+![27-Follow-TCPStream-Hex](/assets/images/03/27-Follow-TCPStream-Hex.png)
 
 - More jargon should appear! This is more meaningful jargon, though. Notice the very first few bits of hex in the file. They are EXACTLY the same as the .docx file signature. Now if we didn't already know what type of file this was, THIS IS THE WAY TO DETERMINE THE FILE TYPE. Since the file signature matches our .docx file signature, we can copy the raw data and convert the packet back to a Word document!
 
-![28-Hex-File-Sig](/content/images/2020/03/28-Hex-File-Sig.png)
+![28-Hex-File-Sig](/assets/images/03/28-Hex-File-Sig.png)
 
 - To do this, switch the dropdown menu for "Show and save data as", from **Hex Dump** to **Raw**. EVEN MORE JARGON! However, you can still tell that this is a .docx file by looking at the first few alphanumeric characters again. It's the same data in a different format!
 
-![29-hex-to-raw](/content/images/2020/03/29-hex-to-raw.png)
+![29-hex-to-raw](/assets/images/03/29-hex-to-raw.png)
 
 - Near the bottom of the window, click **Save As...**
 
-![30-raw-to-save](/content/images/2020/03/30-raw-to-save.png)
+![30-raw-to-save](/assets/images/03/30-raw-to-save.png)
 
 - Save the file as whatever you want, **HOWEVER, YOU HAVE TO END THE FILENAME WITH THE CORRESPONDING FILE TYPE AND NOT AS A .TXT!!!!** in my example, I saved it as a .docx. Change the ""Save as type:" to **All Files**.
 
-![31-save-as-docx](/content/images/2020/03/31-save-as-docx.png)
+![31-save-as-docx](/assets/images/03/31-save-as-docx.png)
 
 - Find the file you just saved and open it.
 
-![32-final-doc](/content/images/2020/03/32-final-doc.png)
+![32-final-doc](/assets/images/03/32-final-doc.png)
 
 - It's the same file, recreated! There was no data loss and we were able to discover the contents of a file without downloading it directly from the FTP server.
 
-![33-FINAL](/content/images/2020/03/33-FINAL.png)
+![33-FINAL](/assets/images/03/33-FINAL.png)
 
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 ## Conclusion
