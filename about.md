@@ -68,6 +68,4 @@ I created this blog to use as a reference guide for all of my studies, research,
  <figcaption>eJPT</figcaption>
 </figure>
 
----
-
  <!--kg-card-end: markdown-->
