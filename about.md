@@ -13,48 +13,51 @@ I created this blog to use as a reference guide for all of my studies, research,
 #### (ISC)<sup>2</sup>
 <figure style="width: 150px" class="align-left">
   <img src="/assets/images/certs/isc2_associate.png" alt="">
- <figcaption>Associate of ISC<sup>2</sup.></figcaption>
+ <figcaption>Associate of ISC<sup>2</sup></figcaption>
 </figure>
-![CISSP Badge](/assets/images/certs/isc2_associate.png){: .align-left}
- ![AofISC2 Badge](/assets/images/certs/isc2_associate.png)
+
 #### CompTIA
+
 <figure style="width: 150px" class="align-left">
   <img src="/assets/images/certs/A-.png" alt="">
- <figcaption>A+<sup>2</sup.></figcaption>
+ <figcaption>A+</figcaption>
 </figure>
 <figure style="width: 150px" class="align-left">
   <img src="/assets/images/certs/Network-.png" alt="">
- <figcaption>Network+<sup>2</sup.></figcaption>
+ <figcaption>Network+</figcaption>
 </figure>
 <figure style="width: 150px" class="align-left">
   <img src="/assets/images/certs/Security-.png" alt="">
- <figcaption>Security+<sup>2</sup.></figcaption>
+ <figcaption>Security+</figcaption>
 </figure>
 <figure style="width: 150px" class="align-left">
   <img src="/assets/images/certs/CySA-.png" alt="">
- <figcaption>CySA+<sup>2</sup.></figcaption>
+ <figcaption>CySA+</figcaption>
 </figure>
- ![A+ Badge](/assets/images/certs/A-.png) ![Net+ Badge](/assets/images/certs/Network-.png) ![Sec+ Badge](/assets/images/certs/Security-.png) ![CySA+ Badge](/assets/images/certs/CySA-.png)
+
 #### Offensive Security
+
 <figure style="width: 150px" class="align-left">
   <img src="/assets/images/certs/OSWP.png" alt="">
- <figcaption>Associate of ISC<sup>2</sup.></figcaption>
+ <figcaption>OSWP</figcaption>
 </figure>
- ![OSWP Badge](/assets/images/certs/OSWP.png)
+ 
 #### CWNP
+
 <figure style="width: 150px" class="align-left">
   <img src="/assets/images/certs/cwt.png" alt="">
- <figcaption>Associate of ISC<sup>2</sup.></figcaption>
+ <figcaption>CWT</figcaption>
 </figure>
 <figure style="width: 150px" class="align-left">
   <img src="/assets/images/certs/cws.png" alt="">
- <figcaption>Associate of ISC<sup>2</sup.></figcaption>
+ <figcaption>CWS</figcaption>
 </figure>
- ![CWT Badge](/assets/images/certs/cwt.png) ![CWS Badge](/assets/images/certs/cws.png)
+
 #### eLearnSecurity
+
 <figure style="width: 150px" class="align-left">
   <img src="/assets/images/certs/eJPT.png" alt="">
- <figcaption>eJPT<sup>2</sup.></figcaption>
+ <figcaption>eJPT</figcaption>
 </figure>
- ![eJPT Badge](/assets/images/certs/eJPT.png)
+
  <!--kg-card-end: markdown-->
