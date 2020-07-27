@@ -14,7 +14,7 @@ I created this blog to use as a reference guide for all of my studies, research,
 #### (ISC)<sup>2</sup>
  ![AofISC2 Badge](/assets/images/certs/isc2_associate.png)
 #### CompTIA
- ![A+ Badge](/assets/images/certs/A-.png) ![Net+ Badge](/assets/images/certs/Network-.png) ![Sec+ Badge](/assets/images/certs/Security-.png) ![CySA+ Badge](/content/images/2020/06/CySA-.png)
+ ![A+ Badge](/assets/images/certs/A-.png) ![Net+ Badge](/assets/images/certs/Network-.png) ![Sec+ Badge](/assets/images/certs/Security-.png) ![CySA+ Badge](/assets/images/certs/CySA-.png)
 #### Offensive Security
  ![OSWP Badge](/assets/images/certs/OSWP.png)
 #### CWNP
