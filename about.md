@@ -12,12 +12,12 @@ I created this blog to use as a reference guide for all of my studies, research,
 ### Certifications
 
 #### (ISC)<sup>2</sup>
- ![AofISC2 Badge](/content/images/2020/06/isc2_associate.png)
+ ![AofISC2 Badge](/assets/images/certs/isc2_associate.png)
 #### CompTIA
- ![A+ Badge](/content/images/2020/06/A-.png) ![Net+ Badge](/content/images/2020/06/Network-.png) ![Sec+ Badge](/content/images/2020/06/Security-.png) ![CySA+ Badge](/content/images/2020/06/CySA-.png)
+ ![A+ Badge](/assets/images/certs/A-.png) ![Net+ Badge](/assets/images/certs/Network-.png) ![Sec+ Badge](/assets/images/certs/Security-.png) ![CySA+ Badge](/content/images/2020/06/CySA-.png)
 #### Offensive Security
- ![OSWP Badge](/content/images/2020/06/OSWP.png)
+ ![OSWP Badge](/assets/images/certs/OSWP.png)
 #### CWNP
- ![CWT Badge](/content/images/2019/07/cwt.png) ![CWS Badge](/content/images/2019/08/CWS-Logo.png)
+ ![CWT Badge](/assets/images/certs/cwt.png) ![CWS Badge](/assets/images/certs/CWS-Logo.png)
 #### eLearnSecurity
- ![eJPT Badge](/content/images/2020/06/eJPT.png)<!--kg-card-end: markdown-->
+ ![eJPT Badge](/assets/images/certs/eJPT.png)<!--kg-card-end: markdown-->
