@@ -18,6 +18,6 @@ I created this blog to use as a reference guide for all of my studies, research,
 #### Offensive Security
  ![OSWP Badge](/assets/images/certs/OSWP.png)
 #### CWNP
- ![CWT Badge](/assets/images/certs/cwt.png) ![CWS Badge](/assets/images/certs/CWS-Logo.png)
+ ![CWT Badge](/assets/images/certs/cwt.png) ![CWS Badge](/assets/images/certs/cws.png)
 #### eLearnSecurity
  ![eJPT Badge](/assets/images/certs/eJPT.png)<!--kg-card-end: markdown-->
