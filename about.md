@@ -12,7 +12,7 @@ I created this blog to use as a reference guide for all of my studies, research,
 ### Certifications
 
 #### (ISC)<sup>2</sup>
-![CISSP Badge]({{ site.url }}{{ site.baseurl }}/assets/images/certs/isc2_associate.png){: .align-left}
+![CISSP Badge](/assets/images/certs/isc2_associate.png){: .align-left}
  ![AofISC2 Badge](/assets/images/certs/isc2_associate.png)
 #### CompTIA
  ![A+ Badge](/assets/images/certs/A-.png) ![Net+ Badge](/assets/images/certs/Network-.png) ![Sec+ Badge](/assets/images/certs/Security-.png) ![CySA+ Badge](/assets/images/certs/CySA-.png)
