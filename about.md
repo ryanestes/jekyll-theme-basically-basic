@@ -16,6 +16,8 @@ I created this blog to use as a reference guide for all of my studies, research,
  <figcaption>Associate of ISC<sup>2</sup></figcaption>
 </figure>
 
+---
+
 <br/>
 
 #### CompTIA
@@ -37,6 +39,8 @@ I created this blog to use as a reference guide for all of my studies, research,
  <figcaption>CySA+</figcaption>
 </figure>
 
+---
+
 <br/>
 
 #### Offensive Security
@@ -46,6 +50,8 @@ I created this blog to use as a reference guide for all of my studies, research,
  <figcaption>OSWP</figcaption>
 </figure>
  
+---
+
 <br/>
  
 #### CWNP
@@ -59,6 +65,8 @@ I created this blog to use as a reference guide for all of my studies, research,
  <figcaption>CWS</figcaption>
 </figure>
 
+---
+
 <br/>
 
 #### eLearnSecurity
@@ -67,5 +75,7 @@ I created this blog to use as a reference guide for all of my studies, research,
   <img src="/assets/images/certs/eJPT.png" alt="">
  <figcaption>eJPT</figcaption>
 </figure>
+
+---
 
  <!--kg-card-end: markdown-->
