@@ -7,6 +7,14 @@
 -->
 <html lang="{{ page.lang | default: site.lang | default: 'en-US' }}" class="no-js">
   {% include head.html %}
+    
+  <script id="iip-wdg" data-distance="100" data-valign="top" data-halign="right" data-minimize="1" data-container="" type="text/javascript">
+    (function() {function async_load(){
+	    var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = "//isitphishing.org/widget/widget.js";
+	    var wscript = document.getElementById("iip-wdg");wscript.parentNode.insertBefore(s, wscript);}
+	    if (window.attachEvent){window.attachEvent("onload", async_load);}else{window.addEventListener("load", async_load, false);}
+    })();
+  </script>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} {{ page.title | slugify }}">
 
