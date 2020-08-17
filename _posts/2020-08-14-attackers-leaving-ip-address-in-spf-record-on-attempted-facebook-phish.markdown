@@ -50,4 +50,4 @@ Based on the information gathered from analyzing the original website I have con
 - Doing a DNS lookup on lsdd[.]host shows an SPF record in the TXT record of the probable real IP address of the attacker
 - Doing a lookup of this IP address shows that it originates from Moscow, RU (allegedly)
 
-We could obviously perform more steps to gather even more information such as a PCAP or even probing the IP for other possible hostnames and more, but I gather enough on this phish
+We could obviously perform more steps to gather even more information such as a PCAP or even probing the IP for other possible hostnames and more, but I gathered enough on this phish
