@@ -2,6 +2,7 @@
 layout: post
 title: Attackers Leaving IP Address in SPF Record on Attempted Facebook Phish
 featured: true
+excerpt_separator: <!--more-->
 date: '2020-08-14 18:19:00'
 tags:
 - phishing
@@ -10,7 +11,7 @@ tags:
 ---
 
 I haven't posted in a while so I figured I had enough time to do a simple post on a phishing attempt I came across today. This short post will show how I used open-source information to discover an attacker's *apparent* location from a phishing attempt that impersonated Facebook.
-
+<!--more-->
 ## The Phish
 
 **URL:** s3[.]us-west-1[.]wasabisys[.]com/tranqueavisp/indexs[.]html
