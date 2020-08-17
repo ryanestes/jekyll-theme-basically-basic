@@ -2,6 +2,7 @@
 layout: post
 title: Checking Access Points For WIPS/WIDS Protection From Evil Twin Attacks
 date: '2019-06-19 09:08:00'
+excerpt_separator: <!--more-->
 tags:
 - hacking
 - how-to
@@ -15,7 +16,7 @@ tags:
 ---
 
 The premier defense for rogue access points in a wireless network is the implementation of a Wireless Intrusion Prevention System (WIPS) or Wireless Intrusion Detection System (WIDS). A quick WIPS/WIDS implementation check can be performed on any access point with a WiFi Pineapple Nano handy. This proof-of-concept will show how to check open access points for WIPS/WIDS implementation by using a WiFi Pineapple Nano. This check is both safe and legal and is a good starting point to test the WiFi Pineapple functionality and an access point for **ONE** of the **SIX** [Trusted Wireless Environment](https://www.trustedwirelessenvironment.com/) common hacks - "Evil Twin" Access Points
-
+<!--more-->
 <!--kg-card-begin: markdown-->
 
 _Note: In this tutorial I will filter my MAC address so only my own device can connect with my WiFi Pineapple. This proof-of-concept is performed completely with my own devices. I do not condone using this information as part of any malicious act._
