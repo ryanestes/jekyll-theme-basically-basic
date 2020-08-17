@@ -2,6 +2,7 @@
 layout: post
 title: 'HSTS: What It Is, Why It is Important, and Vulnerabilities Within'
 date: '2019-08-08 23:44:26'
+excerpt_separator: <!--more-->
 tags:
 - hacking
 - hsts
@@ -15,7 +16,7 @@ tags:
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 
 **HTTP Strict Transport Security (HSTS)** is an HTTP security mechanism that allows web sites to declare themselves as accessible only via secure connections and for users to direct user agents (UAs), or your browser, to interact with web sites only over a secure connection. A "secure connection" in this case means an SSL/TLS encrypted HTTP connection, or HTTPS. This mechanism is designed to protect against downgrade attacks such as **sslstrip** which downgrades HTTPS to HTTP via redirection mappings. I will talk more about that later, but first, how did HSTS come about?
-
+<!--more-->
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 ## Origins
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
