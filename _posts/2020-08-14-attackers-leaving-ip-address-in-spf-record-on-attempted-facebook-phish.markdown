@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Attackers Leaving IP Address in SPF Record on Attempted Facebook Phish
+featured: true
 date: '2020-08-14 18:19:00'
 tags:
 - phishing
