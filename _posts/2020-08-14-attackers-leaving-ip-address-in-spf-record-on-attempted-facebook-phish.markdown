@@ -35,7 +35,7 @@ A DNS lookup shows that this domain is using Cloudflare as a proxy. However, the
 
 ![Facebook Phish 3](/assets/images/08-14-2020/fb-phish-3.png)
 
-## The Phishing Attempt
+## IP Address Lookup
 
 This IP address appears to be located in Moscow, Russia. It is also worth noting that this IP address has ports open for HTTP(S), FTP(S), IMAP(S), SMTP(S), and DNS.
 
