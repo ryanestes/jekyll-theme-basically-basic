@@ -2,6 +2,7 @@
 layout: post
 title: Extracting a Microsoft Word Document from a PCAP
 featured: true
+excerpt_separator: <!--more-->
 date: '2020-03-26 18:17:40'
 tags:
 - ftp
@@ -19,7 +20,7 @@ tags:
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 
 This post pertains to a prior Capture-The-Flag (CTF) competition I was competing in where one of the challenges was to read the text (or flag) of a file from a packet capture (PCAP). The PCAP was taken from a user downloading a file from a misconfigured or outdated FTP server that didn't have SSL/TLS encryption. So, I set up a simple FileZilla FTP server on my Windows machine and attempted to recreate the challenge so I could have documentation on how to perform some of the actions. This post covers how to read unencrypted FTP traffic from a Wireshark PCAP and file carving techniques to be able to recreate a file from a PCAP stream.
-
+<!--more-->
 <!--kg-card-end: markdown-->
 * * *
 <!--kg-card-begin: markdown-->

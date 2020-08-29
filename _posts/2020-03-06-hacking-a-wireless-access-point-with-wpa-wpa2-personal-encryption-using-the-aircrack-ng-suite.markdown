@@ -3,6 +3,7 @@ layout: post
 title: Hacking a Wireless Access Point (Router) with WPA/WPA2 Personal Encryption
   using the Aircrack-ng Suite
 featured: true
+excerpt_separator: <!--more-->
 date: '2020-03-06 03:00:11'
 tags:
 - hacking
@@ -24,7 +25,7 @@ After WEP encryption was introduced with the ratification of the IEEE 802.11 sta
 - Implementation of a packet sequencer so out-of-order packets are rejected
 - Mixes root keys with IVs on a key-by-key basis instead of appending root key with IV
 - Stronger data assurance than the Cyclic Redundancy Check (CRC) from WEP with the introduction of a 64-bit MIC (Message Integrity Check)
-
+<!--more-->
 TKIP provided much needed security for an increasingly vulnerable wireless world back in those days. [Hacking WEP encryption](/hacking-a-wep-encrypted-wireless-access-point-using-the-aircrack-ng-suite/) was becoming tooled, weaponized, and unfortunately, trivial before WPA replaced it. However, since WPA was a temporary solution, it still used WEP's RC4 stream cipher. The Wi-Fi Alliance quickly enhanced WPA a year after it's public reveal with the introduction of WPA2 to combat additional possible vulnerabilities, but it wasn't enough.
 
 #### WPA2

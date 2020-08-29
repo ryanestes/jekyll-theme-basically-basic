@@ -2,6 +2,7 @@
 layout: post
 title: Setting Up a Virtual Machine Using VirtualBox
 featured: true
+excerpt_separator: <!--more-->
 date: '2020-05-25 20:37:07'
 tags:
 - how-to
@@ -20,7 +21,7 @@ This post will cover how to set up a virtual machine from scratch on Windows 10 
 
 - Kali Linux
 - Windows 10
-
+<!--more-->
 In case you are completely unaware or need a refresher on virtualization or virtual machines, here is a few good resources for a high-level overview:
 
 - [Red Hat: What is Virtualization](https://www.redhat.com/en/topics/virtualization/what-is-virtualization)

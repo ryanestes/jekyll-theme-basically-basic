@@ -2,6 +2,7 @@
 layout: post
 title: WiFu and OSWP Certification Review
 date: '2019-05-26 17:32:00'
+excerpt_separator: <!--more-->
 tags:
 - certifications
 - hacking
@@ -13,7 +14,7 @@ tags:
 ---
 
 On May 10th, 2019, I successfully attempted and passed the Offensive Security Wireless Professional (OSWP) exam. In this post I will talk about the preliminary Offensive Security Wireless Attacks with Kali (WiFu) course, as well as my thoughts on the OSWP exam.
-
+<!--more-->
 ## Who Should Take This Course
 
 According to Offensive Security, the WiFu course and OSWP certification is “designed for information security professionals who want to take a serious and meaningful step into the world of wireless penetration testing.” This includes “Security Professionals & Enthusiasts” and “Network Administrators”, according to Offensive Security.

@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Contact
-date: '2019-06-15 17:01:14'
 ---
 
 For any questions or comments contact **ryan AT ryandinho DOT me**

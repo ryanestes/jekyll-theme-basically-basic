@@ -2,6 +2,7 @@
 layout: post
 title: How To Set Up A WiFi Pineapple Nano
 featured: true
+excerpt_separator: <!--more-->
 date: '2019-06-08 17:34:00'
 tags:
 - wifi
@@ -18,7 +19,7 @@ tags:
 ---
 
 The WiFi Pineapple has become ubiquitous within the cyber security community and network industry professionals alike. The low price tag, easy to use PineAP GUI, and mobility have shown that [Hak5](https://shop.hak5.org/) have made a product to genuinely assist with wireless security assessments. This post was originally used to reference the setup process or for those who have a dusty WiFi Pineapple sitting around, or anyone looking for help.
-
+<!--more-->
 
 
 <!--kg-card-end: markdown-->

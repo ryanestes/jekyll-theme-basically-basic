@@ -2,6 +2,7 @@
 layout: post
 title: Setting up a new Wi-Fi Penetration Testing Setup
 date: '2019-09-28 21:19:00'
+excerpt_separator: <!--more-->
 tags:
 - hacking
 - how-to
@@ -14,7 +15,7 @@ tags:
 ---
 
 This quick post will cover the preliminary steps of setting up a PC to begin wireless (Wi-Fi) penetration testing using a Kali Linux VM and a Wi-Fi adapter capable of packet injection (promiscuous mode). This post is NOT for someone who has no experience or for someone trying to hack their neighbors Wi-Fi for nefarious purposes or free Internet. This is an educational post for those who have some idea of what they are doing and want to get started with Wi-Fi penetration testing.
-
+<!--more-->
 **THIS IS FOR EDUCATIONAL PURPOSES ONLY AND SHOULD BE TREATED AS SUCH. I WILL NOT BE RESPONSIBLE IF YOU USE THIS INFORMATION FOR MALICIOUS PURPOSES AND ANY ADVERSE ACTION ASSOCIATED WITH IT.**
 
 <!--kg-card-end: markdown-->

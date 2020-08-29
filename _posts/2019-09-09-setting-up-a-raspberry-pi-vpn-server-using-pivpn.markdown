@@ -2,6 +2,7 @@
 layout: post
 title: Setting up SSH, PiVPN, and Pi-Hole on a Raspberry Pi
 date: '2019-09-09 03:04:00'
+excerpt_separator: <!--more-->
 tags:
 - raspberry-pi
 - how-to
@@ -20,7 +21,7 @@ The Raspberry Pi is a versatile, credit card-sized computer that is used for a [
 - Setup an adblocker using Pi-Hole
 - Add a phishing domain feed to Pi-Hole to kickstart the bad domain blocker
 - Edit the pi-hole cron job to update daily instead of weekly
-
+<!--more-->
 
 _NOTE: This proof-of-concept was created using a Raspberry Pi 3 Model B+ running Raspbian Buster v4.19. As of this writing, the Raspberry Pi 4 is the current model and this is the recommended model for this project (or the most current model)._
 

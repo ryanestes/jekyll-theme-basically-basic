@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Hacking a WEP Encrypted Wireless Access Point using the Aircrack-ng Suite
+excerpt_separator: <!--more-->
 date: '2020-01-01 05:44:14'
 ---
 
@@ -8,7 +9,7 @@ date: '2020-01-01 05:44:14'
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 
 Wired Equivalent Privacy (WEP) was introduced in 1997 in tandem with the original IEEE 802.11 standard, but it was ratified as the official Wi-Fi security standard in 1999. As the name suggests, WEP was meant to equal the security of wired LAN communcations. However, shortly after it's ratification, weaknesses in the security algorithm began to surface as soon as 2001 when Scott Fluhrer, Itsik Mantin, and Adi Shamir released their publication: [Weaknesses in the Key Scheduling Algorithm of RC4](https://www.cs.cornell.edu/people/egs/615/rc4_ksaproc.pdf). From then on, the flood gates were open; weaknesses in the algorithm and WEP's implementation of the RC4 symmetric stream cipher came in waves. This post will discuss the fundamentals of the WEP algorithm and why it is weak, flawed, and ultimately deprecated by IEEE as of 2004. Although it has been long deprecated, it is important to know how these cryptographic mechanisms are implemented and, you never know, some organizations still may be using WEP encryption (unfortunately).
-
+<!--more-->
 <!--kg-card-end: markdown-->
 * * *
 <!--kg-card-begin: markdown-->
