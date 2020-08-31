@@ -96,10 +96,15 @@ The DomainTools Whois lookup tool was used to discover information about the IP 
 Listed here are all the possible landing pages resulting from clicking any of the URLs in this post. Note: This is only the *known* list of landing pages, there could be more.
 
 ![USPS SMiSh](/assets/images/08-30-2020/usps_smish.png)
+
 ![Membership Rewards SMiSh](/assets/images/08-30-2020/membershiprewards_smish.png)
+
 ![Free iPhone 11 SMiSh](/assets/images/08-30-2020/freeiphone11_smish.png)
+
 ![FedEx SMiSh](/assets/images/08-30-2020/fedex_smish.png)
+
 ![Cox SMiSh](/assets/images/08-30-2020/cox_smish.png)
+
 ![Cox SMiSh 2](/assets/images/08-30-2020/cox2_smish.png)
 
 ## Domains and URLs
