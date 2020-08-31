@@ -28,32 +28,32 @@ This section will cover the SMiShes themselves (pictures) and information about 
 
 #### l1smc[.]info
 
-![l1smc](/content/images/08-30-2020/l1smc.PNG)
-![l1smc-2](/content/images/08-30-2020/l1smc-2.PNG)
+![l1smc](/assets/images/08-30-2020/l1smc.PNG)
+![l1smc-2](/assets/images/08-30-2020/l1smc-2.PNG)
 
 #### l2scr[.]info
 
-![l2scr](/content/images/08-30-2020/l2scr.PNG)
-![l2scr-2](/content/images/08-30-2020/l2scr-2.png)
-![l2scr-3](/content/images/08-30-2020/l2scr-3.PNG)
-![l2scr-4](/content/images/08-30-2020/l2scr-4.PNG)
-![l2scr-5](/content/images/08-30-2020/l2scr-5.PNG)
+![l2scr](/assets/images/08-30-2020/l2scr.PNG)
+![l2scr-2](/assets/images/08-30-2020/l2scr-2.png)
+![l2scr-3](/assets/images/08-30-2020/l2scr-3.PNG)
+![l2scr-4](/assets/images/08-30-2020/l2scr-4.PNG)
+![l2scr-5](/assets/images/08-30-2020/l2scr-5.PNG)
 
 #### l3smr[.]info
 
-![l3smr](/content/images/08-30-2020/l3smr.png)
+![l3smr](/assets/images/08-30-2020/l3smr.png)
 
 #### l4sve[.]info
 
-![l4sve](/content/images/08-30-2020/l1smc.png)
-![l4sve-2](/content/images/08-30-2020/l1smc.PNG)
+![l4sve](/assets/images/08-30-2020/l1smc.png)
+![l4sve-2](/assets/images/08-30-2020/l1smc.PNG)
 
 #### l5ssv[.]info
 
-![l5ssv](/content/images/08-30-2020/l1smc.PNG)
-![l5ssv-2](/content/images/08-30-2020/l1smc.PNG)
-![l5ssv-3](/content/images/08-30-2020/l1smc.PNG)
-![l5ssv-4](/content/images/08-30-2020/l1smc.PNG)
+![l5ssv](/assets/images/08-30-2020/l1smc.PNG)
+![l5ssv-2](/assets/images/08-30-2020/l1smc.PNG)
+![l5ssv-3](/assets/images/08-30-2020/l1smc.PNG)
+![l5ssv-4](/assets/images/08-30-2020/l1smc.PNG)
 
 ### Passive Reconnaissance
 
@@ -67,34 +67,34 @@ TODO
 
 ### domains
 
-l1smc[.]info
-l2scr[.]info
-l3smr[.]info
-l4sve[.]info
-l5ssv[.]info
-bgfdc[.]info
-sbcae[.]info
-utzho[.]info
+- l1smc[.]info
+- l2scr[.]info
+- l3smr[.]info
+- l4sve[.]info
+- l5ssv[.]info
+- bgfdc[.]info
+- sbcae[.]info
+- utzho[.]info
 
 ### URLs
 
-l1smc[.]info/i4B8uiee0a
-l1smc[.]info/i4B8uin2vq
-l2scr[.]info/KiF46J87bC
-l2scr[.]info/KiDo37zjMj
-l2scr[.]info/KigKalF3R9
-l2scr[.]info/KiDo375mT7
-l2scr[.]info/KilMlbzjMj
-l3smr[.]info/09Nh46erLO
-l4sve[.]info/o6icgxntOe
-l4sve[.]info/o6icgxzjMj
-l5ssv[.]info/QTyhVcBhKs
-l5ssv[.]info/QTuVNYkWh3
-l5ssv[.]info/QTwBRAjqK2
-l5ssv[.]info/QTyhVc6tel
-bgfdc[.]info/7vsqg76ZGz
-sbcae[.]info/BYhxV4jAB1
-utzho[.]info/Tf7Slh4POr
+- l1smc[.]info/i4B8uiee0a
+- l1smc[.]info/i4B8uin2vq
+- l2scr[.]info/KiF46J87bC
+- l2scr[.]info/KiDo37zjMj
+- l2scr[.]info/KigKalF3R9
+- l2scr[.]info/KiDo375mT7
+- l2scr[.]info/KilMlbzjMj
+- l3smr[.]info/09Nh46erLO
+- l4sve[.]info/o6icgxntOe
+- l4sve[.]info/o6icgxzjMj
+- l5ssv[.]info/QTyhVcBhKs
+- l5ssv[.]info/QTuVNYkWh3
+- l5ssv[.]info/QTwBRAjqK2
+- l5ssv[.]info/QTyhVc6tel
+- bgfdc[.]info/7vsqg76ZGz
+- sbcae[.]info/BYhxV4jAB1
+- utzho[.]info/Tf7Slh4POr
 
 ## Definitions
 
@@ -109,5 +109,3 @@ TODO
 ##### Social Engineering
 
 TODO
-
-##### SMiShing
