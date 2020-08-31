@@ -86,7 +86,7 @@ A `dig` command was used to figure out the IP address of the server hosting this
 
 #### Whois Lookup
 
-The DomainTools Whois lookup tool was used to discover information about the IP address/server. Based on the information in the Whois lookup, this server is hosted on an Alibaba cloud server. This means the attackers are using a cloud service to host or send these SMiShing messages out and are likely harvesting sensitive information using scam tactics. Based on the landing pages, these SMS message links likely lead to pages that have been compromised or are hosted by the attackers themselves. There's not too much more than can be gathered unless a PCAP is gathered and further analysis is done, but that is out of scope.
+The DomainTools Whois lookup tool was used to discover information about the IP address/server. Based on the information in the Whois lookup, this server is hosted on an Alibaba cloud server in Hong Kong, China. This means the attackers are using a cloud service to host or send these SMiShing messages out and are likely harvesting sensitive information using scam tactics. Based on the landing pages, these SMS message links likely lead to pages that have been compromised or are hosted by the attackers themselves. There's not too much more than can be gathered unless a PCAP is gathered and further analysis is done, but that is out of scope.
 
 ![Whois](/assets/images/08-30-2020/whois1.png)
 ![Whois](/assets/images/08-30-2020/whois2.png)
