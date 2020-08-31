@@ -40,11 +40,11 @@ This section will cover the SMiShes themselves (pictures) and information about 
 
 ### l4sve[.]info
 
-![l4sve](/assets/images/08-30-2020/l1smc.png) ![l4sve-2](/assets/images/08-30-2020/l1smc.PNG)
+![l4sve](/assets/images/08-30-2020/l4sve.png) ![l4sve-2](/assets/images/08-30-2020/l4sve-2.PNG)
 
 ### l5ssv[.]info
 
-![l5ssv](/assets/images/08-30-2020/l1smc.PNG) ![l5ssv-2](/assets/images/08-30-2020/l1smc.PNG) ![l5ssv-3](/assets/images/08-30-2020/l1smc.PNG) ![l5ssv-4](/assets/images/08-30-2020/l1smc.PNG)
+![l5ssv](/assets/images/08-30-2020/l5ssv.PNG) ![l5ssv-2](/assets/images/08-30-2020/l5ssv-2.PNG) ![l5ssv-3](/assets/images/08-30-2020/l5ssv-3.PNG) ![l5ssv-4](/assets/images/08-30-2020/l5ssv-4.PNG)
 
 ### Passive Reconnaissance
 
