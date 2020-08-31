@@ -30,6 +30,7 @@ This section will cover the SMiShes themselves (pictures) and information about 
 
 ![l1smc](/assets/images/08-30-2020/l1smc.PNG)
 ![l1smc-2](/assets/images/08-30-2020/l1smc-2.PNG)
+<img src="https://github.com/ryanestes/ryanestes.github.io/tree/master/assets/images/l1smc.PNG" width="250"/> <img src="https://github.com/ryanestes/ryanestes.github.io/tree/master/assets/images/l1smc-2.PNG" width="250"/>
 
 #### l2scr[.]info
 
