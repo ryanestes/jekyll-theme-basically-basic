@@ -11,7 +11,7 @@ tags:
 - scam
 ---
 
-Beginning the week of August 23rd, a [SMiShing](#smishing) campaign began to unfold that, by and large, impersonated large mail carrier and parcel services with the intention of stealing sensitive information from the victims. This post will explain the high-level tactics and technologies the attacker(s) used to send these SMiShes as well as several real-world text message examples that were attributed to this campaign, including myself. At the end of this post will be the list of known domains and URLs used in this campaign (tentative).
+Beginning the week of August 23rd, a SMiShing campaign began to unfold that, by and large, impersonated large mail carrier and parcel services with the intention of stealing sensitive information from the victims. This post will explain the high-level tactics and technologies the attacker(s) used to send these SMiShes as well as several real-world text message examples that were attributed to this campaign, including myself. At the end of this post will be the list of known domains and URLs used in this campaign (tentative).
 <!--more-->
 ## Preliminary Information
 
@@ -27,7 +27,7 @@ Here a few definitions for need-to-know terms for this post.
 
 ### What is SMiShing
 
-SMiShing campaigns, and other similar [social engineering](#socialengineering) attacks, often utilize current events and other psychological tricks to further coerce victims into divulging sensitive information. For example, I bet you have received an email, text, or instant message that claims you can lose 50 pounds fast and all you have to do to get a limited supply of their supplement is to click a link. Well, there are several psychological factors at play here, but there are two that stick out immediately:
+SMiShing campaigns, and other similar social engineering attacks, often utilize current events and other psychological tricks to further coerce victims into divulging sensitive information. For example, I bet you have received an email, text, or instant message that claims you can lose 50 pounds fast and all you have to do to get a limited supply of their supplement is to click a link. Well, there are several psychological factors at play here, but there are two that stick out immediately:
 
 1. The attacker assumes that the victim wants to lose weight or has body image issues. Considering about [half of Americans say that they're trying to lose weight](https://time.com/5334532/weight-loss-americans/), this is an effective approach
 2. The use of the words "limited supply" imply that the stock is low and the victim needs to react fast to get this supplement. This is a common tactic in social engineering that combines emotion with time-sensitive decisions.
