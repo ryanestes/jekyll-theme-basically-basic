@@ -1,6 +1,8 @@
 ---
 layout: post
 title: SMiShing Campaign Leverages USPS and Parcel Service Distrust
+featured: true
+excerpt_separator: <!--more-->
 date: '2020-08-30 18:35:29'
 tags:
 - phishing
@@ -9,8 +11,8 @@ tags:
 - scam
 ---
 
-Beginning the week of August 23rd, a ![SMiShing](#smishing) campaign began to unfold that, by and large, impersonated large mail carrier and parcel services with the intention of stealing sensitive information from the victims. This post will explain the high-level tactics and technologies the attacker(s) used to send these SMiShes as well as several real-world text message examples that were attributed to this campaign, including myself. At the end of this post will be the list of known domains used in this campaign (tentative).
-
+Beginning the week of August 23rd, a ![SMiShing](#smishing) campaign began to unfold that, by and large, impersonated large mail carrier and parcel services with the intention of stealing sensitive information from the victims. This post will explain the high-level tactics and technologies the attacker(s) used to send these SMiShes as well as several real-world text message examples that were attributed to this campaign, including myself. At the end of this post will be the list of known domains and URLs used in this campaign (tentative).
+<!--more-->
 ## Preliminary Information
 
 SMiShing campaigns, and other similar ![social engineering](#socialengineering) attacks, often utilize current events and other psychological tricks to further coerce victims into divulging sensitive information. For example, I bet you have received an email, text, or instant message that claims you can lose 50 pounds fast and all you have to do to get a limited supply of their supplement is to click a link. Well, there are several psychological factors at play here, but there are two that stick out immediately:
@@ -22,103 +24,90 @@ The SMiShing campaign in this post impersonated common postal and parcel service
 
 ## The SMiShes
 
-This section will cover the SMiShes themselves (pictures) and information about the origins of the attacker.
+This section will cover the SMiShes themselves (pictures) and information about the origins/infrastructure of the attacker. First, all of the SMiShes.
 
-![Facebook Phish 2](/content/images/08-14-2020/fb-phish-2.png)
+#### l1smc[.]info
+
+![l1smc](/content/images/08-30-2020/l1smc.PNG)
+![l1smc-2](/content/images/08-30-2020/l1smc-2.PNG)
+
+#### l2scr[.]info
+
+![l2scr](/content/images/08-30-2020/l2scr.PNG)
+![l2scr-2](/content/images/08-30-2020/l2scr-2.png)
+![l2scr-3](/content/images/08-30-2020/l2scr-3.PNG)
+![l2scr-4](/content/images/08-30-2020/l2scr-4.PNG)
+![l2scr-5](/content/images/08-30-2020/l2scr-5.PNG)
+
+#### l3smr[.]info
+
+![l3smr](/content/images/08-30-2020/l3smr.png)
+
+#### l4sve[.]info
+
+![l4sve](/content/images/08-30-2020/l1smc.png)
+![l4sve-2](/content/images/08-30-2020/l1smc.PNG)
+
+#### l5ssv[.]info
+
+![l5ssv](/content/images/08-30-2020/l1smc.PNG)
+![l5ssv-2](/content/images/08-30-2020/l1smc.PNG)
+![l5ssv-3](/content/images/08-30-2020/l1smc.PNG)
+![l5ssv-4](/content/images/08-30-2020/l1smc.PNG)
 
 ### Passive Reconnaissance
 
-A DNS lookup shows that this domain is using Cloudflare as a proxy. However, the TXT record shows that the owner of this domain has an SPF record displaying a different IP than the A record. So I looked up this IP.
-
-![Facebook Phish 3](/content/images/08-14-2020/fb-phish-3.png)
-
-###
-
-This IP address appears to be located in Moscow, Russia. It is also worth noting that this IP address has ports open for HTTP(S), FTP(S), IMAP(S), SMTP(S), and DNS.
-
-![Facebook Phish 4](/content/images/08-14-2020/fb-phish-4.png)
-
-![Facebook Phish 5](/content/images/08-14-2020/fb-phish-5.png)
+TODO
 
 ## Conclusion
 
-Based on the information gathered from analyzing the original website I have concluded the following:
+TODO
 
-- The initial phishing website impersonated Facebook and used a warning banner to coerce victims into entering credentials
-- By looking at the source code it shows that submitting credentials attempts a POST request to https://lsdd[.]host/mango.php
-- Doing a DNS lookup on lsdd[.]host shows an SPF record in the TXT record of the probable real IP address of the attacker
-- Doing a lookup of this IP address shows that it originates from Moscow, RU (allegedly)
+## Domains and URLs
 
-We could obviously perform more steps to gather even more information such as a PCAP or even probing the IP for other possible hostnames and more, but I gather enough on this phish
-=======
----
-layout: post
-title: Attackers Leaving IP Address in SPF Record on Attempted Facebook Phish
-featured: true
-excerpt_separator: <!--more-->
-date: '2020-08-14 18:19:00'
-tags:
-- phishing
-- SPF
-- social engineering
----
+### domains
 
-I haven't posted in a while so I figured I had enough time to do a simple post on a phishing attempt I came across today. This short post will show how I used open-source information to discover an attacker's *apparent* location from a phishing attempt that impersonated Facebook.
-<!--more-->
-## The Phish
+l1smc[.]info
+l2scr[.]info
+l3smr[.]info
+l4sve[.]info
+l5ssv[.]info
+bgfdc[.]info
+sbcae[.]info
+utzho[.]info
 
-**URL:** s3[.]us-west-1[.]wasabisys[.]com/tranqueavisp/indexs[.]html
+### URLs
 
-![Facebook Phish 1](/assets/images/08-14-2020/fb-phish-1.png)
-
-When navigating to the site, there are immediate red flags.
-
-1. The URL is not of a Facebook domain.
-2. There is a warning banner at the top of the page in red lettering which, is not inherently bad or malicious, but it creates a sense of urgency for the user which is seen in some phishing campaigns.
-
-## Inspection
-
-I've already determined that this is a phish just from the assumptions above, but it doesn't hurt being curious to see what else attackers are up to. Upon inspecting the source code of the website and navigating to the authentication form I noticed an obvious anomaly - the form action sends the credentials to an external website. So I looked into this website too.
-
-![Facebook Phish 2](/assets/images/08-14-2020/fb-phish-2.png)
-
-## DNS Information
-
-A DNS lookup shows that this domain is using Cloudflare as a proxy. However, the TXT record shows that the owner of this domain has an SPF record displaying a different IP than the A record. So I looked up this IP.
-
-![Facebook Phish 3](/assets/images/08-14-2020/fb-phish-3.png)
-
-## IP Address Lookup
-
-This IP address appears to be located in Moscow, Russia. It is also worth noting that this IP address has ports open for HTTP(S), FTP(S), IMAP(S), SMTP(S), and DNS.
-
-![Facebook Phish 4](/assets/images/08-14-2020/fb-phish-4.png)
-
-![Facebook Phish 5](/assets/images/08-14-2020/fb-phish-5.png)
-
-## Conclusion
-
-Based on the information gathered from analyzing the original website I have concluded the following:
-
-- The initial phishing website impersonated Facebook and used a warning banner to coerce victims into entering credentials
-- By looking at the source code it shows that submitting credentials attempts a POST request to https://lsdd[.]host/mango.php
-- Doing a DNS lookup on lsdd[.]host shows an SPF record in the TXT record of the probable real IP address of the attacker
-- Doing a lookup of this IP address shows that it originates from Moscow, RU (allegedly)
-
-We could obviously perform more steps to gather even more information such as a PCAP or even probing the IP for other possible hostnames and more, but I gathered enough on this phish
+l1smc[.]info/i4B8uiee0a
+l1smc[.]info/i4B8uin2vq
+l2scr[.]info/KiF46J87bC
+l2scr[.]info/KiDo37zjMj
+l2scr[.]info/KigKalF3R9
+l2scr[.]info/KiDo375mT7
+l2scr[.]info/KilMlbzjMj
+l3smr[.]info/09Nh46erLO
+l4sve[.]info/o6icgxntOe
+l4sve[.]info/o6icgxzjMj
+l5ssv[.]info/QTyhVcBhKs
+l5ssv[.]info/QTuVNYkWh3
+l5ssv[.]info/QTwBRAjqK2
+l5ssv[.]info/QTyhVc6tel
+bgfdc[.]info/7vsqg76ZGz
+sbcae[.]info/BYhxV4jAB1
+utzho[.]info/Tf7Slh4POr
 
 ## Definitions
 
 ##### Phishing
 
-
+TODO
 
 ##### SMiShing
 
-
+TODO
 
 ##### Social Engineering
 
-
+TODO
 
 ##### SMiShing
