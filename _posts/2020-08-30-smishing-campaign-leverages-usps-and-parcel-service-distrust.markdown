@@ -48,7 +48,12 @@ This section will cover the SMiShes themselves (pictures) and information about 
 
 ### Passive Reconnaissance
 
-TODO
+![USPS SMiSh](/assets/images/08-30-2020/usps_smish.png)
+![Membership Rewards SMiSh](/assets/images/08-30-2020/membershiprewards_smish.png)
+![Free iPhone 11 SMiSh](/assets/images/08-30-2020/freeiphone11_smish.png)
+![FedEx SMiSh](/assets/images/08-30-2020/fedex_smish.png)
+![Cox SMiSh](/assets/images/08-30-2020/cox_smish.png)
+![Cox SMiSh 2](/assets/images/08-30-2020/cox2_smish.png)
 
 ## Conclusion
 
