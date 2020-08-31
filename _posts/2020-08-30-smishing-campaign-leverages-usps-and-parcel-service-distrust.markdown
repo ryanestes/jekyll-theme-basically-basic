@@ -74,7 +74,7 @@ As can be seen from the variety of images above that this attack didn't target a
 - Each domain is a 5 alphanumeric string that follows a certain pattern ("l" + incrementing number + "s" + 2 random letters)
 - Each message mentions something about an old package that wasn't received
 - Each message asks users to click a link to figure out information about the package
-- Clicking on the links leads to [several different landing pages](#landingpages)
+- Clicking on the links leads to several different landing pages
 
 #### IP Address
 
