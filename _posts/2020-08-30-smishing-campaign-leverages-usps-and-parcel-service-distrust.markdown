@@ -26,13 +26,13 @@ The SMiShing campaign in this post impersonated common postal and parcel service
 
 This section will cover the SMiShes themselves (pictures) and information about the origins/infrastructure of the attacker. First, all of the SMiShes.
 
-#### l1smc[.]info
+### l1smc[.]info
 
 ![l1smc](/assets/images/08-30-2020/l1smc.PNG)
 ![l1smc-2](/assets/images/08-30-2020/l1smc-2.PNG)
-<img src="https://github.com/ryanestes/ryanestes.github.io/tree/master/assets/images/l1smc.PNG" width="250"/> <img src="https://github.com/ryanestes/ryanestes.github.io/tree/master/assets/images/l1smc-2.PNG" width="250"/>
+<img src="/assets/images/l1smc.PNG" width="250"/> <img src="/images/l1smc-2.PNG" width="250"/>
 
-#### l2scr[.]info
+### l2scr[.]info
 
 ![l2scr](/assets/images/08-30-2020/l2scr.PNG)
 ![l2scr-2](/assets/images/08-30-2020/l2scr-2.png)
@@ -40,16 +40,16 @@ This section will cover the SMiShes themselves (pictures) and information about 
 ![l2scr-4](/assets/images/08-30-2020/l2scr-4.PNG)
 ![l2scr-5](/assets/images/08-30-2020/l2scr-5.PNG)
 
-#### l3smr[.]info
+### l3smr[.]info
 
 ![l3smr](/assets/images/08-30-2020/l3smr.png)
 
-#### l4sve[.]info
+### l4sve[.]info
 
 ![l4sve](/assets/images/08-30-2020/l1smc.png)
 ![l4sve-2](/assets/images/08-30-2020/l1smc.PNG)
 
-#### l5ssv[.]info
+### l5ssv[.]info
 
 ![l5ssv](/assets/images/08-30-2020/l1smc.PNG)
 ![l5ssv-2](/assets/images/08-30-2020/l1smc.PNG)
