@@ -46,7 +46,7 @@ The enrollment process is straightforward. As of this writing the fee for the co
 
 <!--kg-card-begin: markdown-->
 
-![Enrollment Screenshot](/content/images/06/OSWP_Enrollment_pic.png)
+![Enrollment Screenshot](/assets/images/06/OSWP_Enrollment_pic.png)
 
 _The enrollment and one time fee includes all of the educational content and an exam attempt._
 
@@ -60,7 +60,7 @@ Offensive Security did the honor of providing the course syllabus in it's entire
 
 Within the syllabus I want to highlight some important concepts and some things to consider. First, and most importantly, there are hardware requirements within the course prerequisites. **You must have a compatible wireless card/adapter and compatible router for the course!** Offensive Security provides recommendations for hardware:
 
-![hardware_specs_oswp](/content/images/06/hardware_specs_oswp.png)
+![hardware_specs_oswp](/assets/images/06/hardware_specs_oswp.png)
 
 The hardware is a bit outdated so I used similar models of the products I could find on Amazon. A small table shows:
 
@@ -101,7 +101,7 @@ According to the OSWP website, an OSWP holder can:
 
 Here is a timeline inforgraphic from initial enrollment to email verification of passing:
 
-![hardware_specs_oswp](/content/images/06/OSWP-Certification-Timeline.jpg)
+![hardware_specs_oswp](/assets/images/06/OSWP-Certification-Timeline.jpg)
 
 ## Conclusion
 
