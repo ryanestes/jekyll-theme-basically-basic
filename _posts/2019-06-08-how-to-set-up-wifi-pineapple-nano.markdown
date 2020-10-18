@@ -292,8 +292,8 @@ _Kudos to the user audibleblink in the Hak5 forums_
 
 1. Navigate to **(Apple Menu) -\> System Preferences -\> Network**
 
-![1](/assets/images/07/1.JPG)  
-![2](/assets/images/07/2.JPG)
+![1](/assets/images/07/1.jpg)  
+![2](/assets/images/07/2.jpg)
 
 
 
@@ -304,7 +304,7 @@ _Kudos to the user audibleblink in the Hak5 forums_
 
 _Note: The WiFi Pineapple Nano Adapter will have an **AX88x72A** chipset description_
 
-![3](/assets/images/07/3.JPG)
+![3](/assets/images/07/3.jpg)
 
 
 
@@ -351,7 +351,7 @@ _Kudos to the user audibleblink in the Hak5 forums_
 
 5. The Wi-Fi Pineapple will reboot and you can now check the IP address and gateway were successfully changed in the **Network** menu again. If it's the 192.168.2.x values, you should be able to continue to the Internet connection sharing portion
 
-![11-pre](/assets/images/07/11-pre.JPG)
+![11-pre](/assets/images/07/11-pre.jpg)
 
 
 
@@ -360,7 +360,7 @@ _Kudos to the user audibleblink in the Hak5 forums_
 
 6. Now, return to the **System Preferences** menu and select **Sharing**
 
-![4](/assets/images/07/4.JPG)
+![4](/assets/images/07/4.jpg)
 
 
 
@@ -378,8 +378,8 @@ _Kudos to the user audibleblink in the Hak5 forums_
 
 8. Select the checkbox next to Internet Sharing in the left menu and select **Start** and ensure it remains checked after clicking **Start**.
 
-![7](/assets/images/07/7.JPG)  
- ![6](/assets/images/07/6.JPG)
+![7](/assets/images/07/7.jpg)  
+ ![6](/assets/images/07/6.jpg)
 
 
 
@@ -388,7 +388,7 @@ _Kudos to the user audibleblink in the Hak5 forums_
 
 9. Navigate to **192.168.2.10:1471** or whatever IP address maps to the IP address you set in _step 6_, ensure the port is **1471** and you will be met with the Welcome screen. Use the on-screen instructions to set up the WiFi Pineapple
 
-![8-pre](/assets/images/07/8-pre.JPG)
+![8-pre](/assets/images/07/8-pre.jpg)
 
 
 
@@ -397,7 +397,7 @@ _Kudos to the user audibleblink in the Hak5 forums_
 
 10. Click the **Load Bulletins from WiFiPineapple.com** button on the Dashboard, if bulletins successfully load you're all ready to go!
 
-![13](/assets/images/07/13.JPG)
+![13](/assets/images/07/13.jpg)
 
 
 
@@ -445,7 +445,7 @@ _This proof of concept was created using a Nokia 6.1 running Android 9 "Pie" (An
 
 1. Plug in the WiFi Pineapple into an available USB slot using the supplied USB Y Cable or any USB that meets the [WiFi Pineapple power specifications](https://docs.hak5.org/hc/en-us/articles/360011238494-Specifications-and-Power-Considerations). Connect the charging cord to your Android device and plug the USB end into the female USB insertion on the WiFi Pineapple
 
-![android-wifi-0](/assets/images/08/android-wifi-0.jpeg)
+![android-wifi-0](/assets/images/08/android-wifi-0.jpg)
 
 
 
