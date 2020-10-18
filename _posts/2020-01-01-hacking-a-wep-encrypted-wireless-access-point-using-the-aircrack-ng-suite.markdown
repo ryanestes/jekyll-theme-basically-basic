@@ -6,21 +6,13 @@ date: '2020-01-01 05:44:14'
 ---
 
 ## Introduction
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 
 Wired Equivalent Privacy (WEP) was introduced in 1997 in tandem with the original IEEE 802.11 standard, but it was ratified as the official Wi-Fi security standard in 1999. As the name suggests, WEP was meant to equal the security of wired LAN communcations. However, shortly after it's ratification, weaknesses in the security algorithm began to surface as soon as 2001 when Scott Fluhrer, Itsik Mantin, and Adi Shamir released their publication: [Weaknesses in the Key Scheduling Algorithm of RC4](https://www.cs.cornell.edu/people/egs/615/rc4_ksaproc.pdf). From then on, the flood gates were open; weaknesses in the algorithm and WEP's implementation of the RC4 symmetric stream cipher came in waves. This post will discuss the fundamentals of the WEP algorithm and why it is weak, flawed, and ultimately deprecated by IEEE as of 2004. Although it has been long deprecated, it is important to know how these cryptographic mechanisms are implemented and, you never know, some organizations still may be using WEP encryption (unfortunately).
 <!--more-->
-<!--kg-card-end: markdown-->
-* * *
-<!--kg-card-begin: markdown-->
 
 _Disclaimer: This post is meant for educational purposes only and any information obtained sholuld not be used for malicious purposes. I will not be responsible for any damage, harm, or legal action derived from any information within this post._
 
-<!--kg-card-end: markdown-->
-* * *
-<!--kg-card-begin: markdown-->
 ## WEP Encryption Algorithm
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 
 WEP uses the RC4 stream cipher to encrypt traffic (confidentiality) and the Cyclic Redundancy Check (CRC) for error detection (integrity) - CRC-32 to be exact. CRC-32 is a 32-bit checksum function to ensure communcations weren't altered in-transit via a Man-in-the-Middle (MitM) attack. The CRC is flawed due to spoofing of sender/destination MAC addresses. However, the meat of the WEP algorithm flaws lie within the implementation of the RC4 cipher. The details lie within mathematical cryptography and the Fluhrer, Mantin, and Shamir publication (linked above) explain it beautifully. Anyways, at a high-level, the WEP encryption algorithm works like this:
 
@@ -54,11 +46,7 @@ _Now is when the cipher text is created_
 
 This process occurs for each packet leaving the sender in the WEP encryption process. Since the process uses RC4, a symmetric encryption technique, the same WEP key is also used to decrypt the cipher text. Symmetric encryption means the encrypting key is also the decrypting key. Thus, the receiver simply XORs the packet (after stripping the ICV to ensure no alterations occured in transit) and the plaintext is revealed. There is a bit more that occurs in the encyption/decryption process, but that is the primary process at a high-level. Now, on to how to break this WEP encryption process and there are quite a few techniques.
 
-<!--kg-card-end: markdown-->
-* * *
-<!--kg-card-begin: markdown-->
 ## Attacks on WEP
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 
 _If you need help with a Wi-Fi penetration testing Setup for these attacks, I've written a short post about that [HERE](/setting-up-a-new-wi-fi-hacking-setup/)_
 
@@ -72,9 +60,7 @@ For this proof-of-concept, I am using the following software/hardware:
 - Virtualbox Version 6.0.6
 - Kali Linux 2019.4
 - Aircrack-ng 1.5.2 (comes with Kali Linux)
-<!--kg-card-end: markdown-->
-* * *
-<!--kg-card-begin: markdown-->
+
 ### Aireplay-ng WEP Attack Listing
 
 [0. Deauthentication](#deauthentication)  
@@ -88,13 +74,8 @@ For this proof-of-concept, I am using the following software/hardware:
 [8. WPA Migration Mode](#hirteattack) 
 [9. Injection Test](#injectiontest)
 
-<!--kg-card-end: markdown-->
-* * *
-<!--kg-card-begin: markdown-->
-
 **To test if your Wi-Fi USB adapter is capable of packet injection, begin with attack number 9 - [Injection Test](#injectiontest)**
 
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 ### Discovering Victim Router Easily:
 
 - Acquire your wireless card interface:
@@ -132,9 +113,7 @@ Once the command is inserted, the following output is displayed (the bottom scre
 
 The output reveals: MAC address, connection information, data transfered, channel, encryption and cipher used, the authentication type, and the SSID. The top also displays the channel you are monitoring on, the type elapsed, and the date.
 
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 ## Deauthentication
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 
 _This attack doesn't directly yield a WEP key_
 
@@ -196,9 +175,8 @@ The deauthentication process happens really quick and if you monitor your victim
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 
 ### [Back to Attack Listings](#aireplayngwepattacklisting)
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
+
 ## Fake Authentication
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 
 _This attack doesn't directly yield a WEP key_
 
@@ -254,9 +232,8 @@ Highlighted in the picture above in the airodump-ng output (`airodump-ng --chann
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 
 ### [Back to Attack Listings](#aireplayngwepattacklisting)
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
+
 ## Interactive Packet Replay
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 
 This attack is a very useful attack and can not only be used alone to acquire a WEP key, but is used with other attacks as a supplement to other Aireplay-ng attacks. The interactive packet replay attack's main objective is to capture a specific packet and be able to replay it or reinject it back into the network. You can't just select any packet and perform this action, we're looking for a very specific packet to be able to collect new IVs for WEP key cracking. The packet we are looking for has the following characteristics:
 
@@ -325,9 +302,8 @@ The key was found!
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 
 ### [Back to Attack Listings](#aireplayngwepattacklisting)
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
+
 ## ARP Request Replay Attack
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 
 This attack takes an ARP packet from the AP and replays it back to the AP, generating new IVs in order to crack the WEP password using Aircrack-ng. An ARP packet converts a layer 3 logical address (IP address) to a layer 2 physical address (MAC address). You can look more into the Address Resolution Protocol (ARP) in [RFC 826](https://tools.ietf.org/html/rfc826).
 
@@ -402,9 +378,8 @@ The key is found!
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 
 ### [Back to Attack Listings](#aireplayngwepattacklisting)
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
+
 ## KoreK ChopChop Attack
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 
 This attack is not used to acquire a WEP key. Rather, it uses cryptanalysis to reveal WEP encrypted traffic plaintext! Basically, it's a wireless client's worst nightmare; an eavesdropper acquiring all your traffic in plaintext. Yet, it isn't without it's flaws and it isn't perfect. It tends to drop shorter packets and tries to guess them instead. I won't go into the cryptography mathematics, just know it takes advantage of a flaw in the CRC-32 algorithm used to calculate the ICV (used to ensure no data in transit was altered). The KoreK ChopChop attack is commonly used if the [Fragmentation Attack](#fragmentation) is giving you trouble, and vice versa.
 
@@ -459,9 +434,8 @@ The interface is changed from **wlan0** to **wlan0mon** indicating the wireless 
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 
 ### [Back to Attack Listings](#aireplayngwepattacklisting)
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
+
 ## Fragmentation Attack
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 
 The fragmentation attack attempts to acquire the PRGA, just like the Korek ChopChop attack above. Thus, this attack is used in conjuction with packetforge-ng and other injection attacks to acquire the key. The PRGA is used to inject into the network, which, in return, the AP will respond back to the requests with a ton of IVs. We use this keystream with airodump-ng to capture the WEP key.
 
@@ -580,9 +554,8 @@ The WEP Key (Router Password) has been found!
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 
 ### [Back to Attack Listings](#aireplayngwepattacklisting)
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
+
 ## Caffe Latte Attack
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 
 The Caffe Latte gets its name from the idea that you can perform this attack in a Cafe very quickly. There are actually other methods to perform this attack using the aircrack-ng suite, but aireplay-ng has the attack wrapped in one command. It does this by capturing an ARP packet from a client (there must be a client connected!), manipulates it, sends it back to the AP, and captures the weak IVs using airodump-ng.
 
@@ -654,9 +627,8 @@ The key has been found!
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 
 ### [Back to Attack Listings](#aireplayngwepattacklisting)
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
+
 ## Hirte Attack
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 
 The Hirte attack is simply an enhanced version of the Caffe Latte attack above. The primary difference being that instead of just an ARP packet being captured, it can be an IP packet as well.
 
@@ -727,17 +699,14 @@ The key has been found!
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 
 ### [Back to Attack Listings](#aireplayngwepattacklisting)
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
+
 ## Injection Test
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 
 The injection test should be the first attack performed in a wireless penetration testing engagement. The injection test determines if your wireless USB adapter (or any other Wi-Fi NIC) is capable of packet injection and also determines packet ping response times; an indicator of how well your wireless card is connected to the victim WAP. A basic injection test also locates nearby WAPs without having to run airodump-ng (although it is still recommended).
 
 ##### Basic Injection Test:
 
--
-
-Acquire your wireless card interface:
+- Acquire your wireless card interface:
 
 `airmon-ng`
 
