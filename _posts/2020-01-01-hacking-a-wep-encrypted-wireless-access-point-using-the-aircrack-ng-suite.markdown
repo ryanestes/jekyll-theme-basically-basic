@@ -162,7 +162,7 @@ The interface is changed from **wlan0** to **wlan0mon** indicating the wireless 
     -c: the victim client MAC address (00:04:4B:59:10:88, this is my android tablet)
 
 ![airodumpfilterbyMAC](/assets/images/12/airodumpfilterbyMAC.png)  
- ![PROOFOFDEAUTH](/assets/images/12/PROOFOFDEAUTH.png)
+![PROOFOFDEAUTH](/assets/images/12/PROOFOFDEAUTH.png)
 
 The deauthentication process happens really quick and if you monitor your victim client as you enter the attacking command, you can witness the deauthentication process. If you run airodump-ng by filtering of the client only (pictured above), the PWR should drop to 0, indicating a successful deauthentication as well. The intricacies of the deauthentication process are out-of-scope for this post and will be discussed in more depth during hacking of WPA/WPA2 to acquire the 4-way handshake.
 
@@ -250,7 +250,7 @@ Prior to this attack, it is good practice to conduct the [Fake Authentication at
 
 `airodump-ng --essid DIR-615 --channel 3 -w interactive-packet-replay-keystream wlan0mon`
 
-![interactivepacketreplay-airodump0](/content/images/2020/01/interactivepacketreplay-airodump0.png)
+![interactivepacketreplay-airodump0](/assets/images/01/interactivepacketreplay-airodump0.png)
 
     --essid: the name of the SSID (DIR-615)
     --channel: the channel the router is running on (3)
@@ -281,15 +281,15 @@ Note: If you run it for a while and still can't find a packet to use. I have had
 
 After `y` is entered on the attack, you will see the data column quickly enumerate. I usually wait until the data column populates to about 100,000, which is the number of IVs collected. This is used in the next step to acquire the WEP key. Below is a screenshot of when I stopped the airodump-ng capture to begin the next step.
 
-![interactivepacketreplay-airodump1-1](/content/images/2020/01/interactivepacketreplay-airodump1-1.png)
+![interactivepacketreplay-airodump1-1](/assets/images/01/interactivepacketreplay-airodump1-1.png)
 
 - Turn off monitoring mode on the interface when complete with all activities:
 
 `aircrack-ng interactive-packet-replay-keystream-01.cap`
 
-![interactivepacketreplay-aircrack-initial](/content/images/2020/01/interactivepacketreplay-aircrack-initial.png)
+![interactivepacketreplay-aircrack-initial](/assets/images/01/interactivepacketreplay-aircrack-initial.png)
 
-![interactivepacketreplay-aircrack-final-1](/content/images/2020/01/interactivepacketreplay-aircrack-final-1.png)
+![interactivepacketreplay-aircrack-final-1](/assets/images/01/interactivepacketreplay-aircrack-final-1.png)
 
 The key was found!
 
@@ -321,7 +321,7 @@ Start with 4 windows up so you are able to see all of them at once in your VM (t
 
 `airodump-ng --essid DIR-615 --channel 3 -w arp-request-replay-keystream wlan0mon`
 
-![interactivepacketreplay-airodump0](/content/images/2020/01/interactivepacketreplay-airodump0.png)
+![interactivepacketreplay-airodump0](/assets/images/01/interactivepacketreplay-airodump0.png)
 
     --essid: the name of the SSID (DIR-615)
     --channel: the channel the router is running on (3)
@@ -341,7 +341,7 @@ This is to ensure the attack is more easily performed with a replay of the ARP p
 
 `aireplay-ng -3 -b 00:18:E7:EA:2A:53 -h 00:04:4B:59:10:88 wlan0mon`
 
-![attack-screen-1](/content/images/2020/01/attack-screen-1.png)
+![attack-screen-1](/assets/images/01/attack-screen-1.png)
 
     -3: the arp request replay attack flag
     -b: the BSSID of the victim AP (00:18:E7:EA:2A:53)
@@ -353,19 +353,19 @@ As highlighted, the pcap information will be saved to a file created by aireplay
 
 `aireplay-ng -0 1 -a 00:18:E7:EA:2A:53 -c 00:04:4B:59:10:88 wlan0mon`
 
-![deauth](/content/images/2020/01/deauth.png)
+![deauth](/assets/images/01/deauth.png)
 
 This is expedite an ARP packet being sent to the AP from the victim client.
 
 - Here is a visualization of what my screen looks like as I am performing this attack. I highlighted the **DATA** field that you should be monitoring:
 
-![FINALSCREEN-1](/content/images/2020/01/FINALSCREEN-1.png)
+![FINALSCREEN-1](/assets/images/01/FINALSCREEN-1.png)
 
 - Once you have enough IVs, 50,000 to 100,000 or so does the trick, use aircrack-ng on the .cap file to acquire the WEP key.
 
-![arp-request-replay-aircrack-initial](/content/images/2020/01/arp-request-replay-aircrack-initial.png)
+![arp-request-replay-aircrack-initial](/assets/images/01/arp-request-replay-aircrack-initial.png)
 
-![arp-request-replay-aircrack-final-1](/content/images/2020/01/arp-request-replay-aircrack-final-1.png)
+![arp-request-replay-aircrack-final-1](/assets/images/01/arp-request-replay-aircrack-final-1.png)
 
 The key is found!
 
@@ -463,7 +463,7 @@ The interface is changed from **wlan0** to **wlan0mon** indicating the wireless 
 
 `aireplay-ng -1 0 -e DIR-615 -a 00:18:E7:EA:28:87 -h 00:C0:CA:96:C1:B6 wlan0mon`
 
-![fragmentation-fake-auth](/content/images/2020/01/fragmentation-fake-auth.png)
+![fragmentation-fake-auth](/assets/images/01/fragmentation-fake-auth.png)
 
     -1: Use the Fake Authentication attack with a reassociation time of (0)
     -e: SSID of router (DIR-615)
@@ -476,7 +476,7 @@ This step is required to perform the fragmentation attack.
 
 `aireplay-ng -5 -b 00:18:E7:EA:28:87 -h 00:C0:CA:96:C1:B6 wlan0mon`
 
-![fragmentation1](/content/images/2020/01/fragmentation1.png)
+![fragmentation1](/assets/images/01/fragmentation1.png)
 
 This attack uses a packet to your router, typically from your own NIC because of the fake authentication attack, to reinject into the network and collect fragments of keying material to acquire the pseudo-random generating algorithm (PRGA). We use the PRGA to create an ARP packet in packetforge-ng to reinject into the network, thus, acquiring weak IVs. These IVs are used by aircrack-ng to acquire the WEP key.
 
@@ -484,7 +484,7 @@ This attack uses a packet to your router, typically from your own NIC because of
 
 `y`
 
-![fragmentation2](/content/images/2020/01/fragmentation2.png)
+![fragmentation2](/assets/images/01/fragmentation2.png)
 
 Once you select the packet, you will see a screen above until you acquire 1500 bytes of a keystream. Next we will use packetforge-ng to create a packet with this keystream and output it to a file.
 
@@ -492,7 +492,7 @@ Once you select the packet, you will see a screen above until you acquire 1500 b
 
 `packetforge-ng -0 -a 00:18:E7:EA:28:87 -h 00:C0:CA:96:C1:B6 -k 192.168.0.150 -l 192.168.0.255 -y fragment-0111-163737.xor -w PRGA-OUTPUT`
 
-![fragmentation-packetforge](/content/images/2020/01/fragmentation-packetforge.png)
+![fragmentation-packetforge](/assets/images/01/fragmentation-packetforge.png)
 
     -0: forge an ARP packet
     -a: victim AP MAC address (00:18:E7:EA:28:87)
@@ -510,7 +510,7 @@ This is how you create an ARP packet in packetforge-ng.
 
 `airodump-ng --essid DIR-615 --channel 3 -w fragmentation-keystream wlan0mon`
 
-![fragmentation-airodump-initial](/content/images/2020/01/fragmentation-airodump-initial.png)
+![fragmentation-airodump-initial](/assets/images/01/fragmentation-airodump-initial.png)
 
     --essid: the name of the SSID (DIR-615)
     --channel: the channel the router is running on (3)
@@ -522,7 +522,7 @@ Take note of the **data** column as it is the most important.
 
 `aireplay-ng -2 -r PRGA-OUTPUT wlan0mon`
 
-![fragmentation-interactivepacketreplay](/content/images/2020/01/fragmentation-interactivepacketreplay.png)
+![fragmentation-interactivepacketreplay](/assets/images/01/fragmentation-interactivepacketreplay.png)
 
     -2: use the interactive replay attack
     -r: write to output of this filename (PRGA-OUTPUT)
@@ -533,15 +533,15 @@ The ARP packet we created with packetforge is being continously reinjected into 
 
 At the time the packet is being reinjected, the data column will quickly rise. Here is the final screen with enough data (IVs) to be able to crack the key:
 
-![fragmentation-airodump-final-1](/content/images/2020/01/fragmentation-airodump-final-1.png)
+![fragmentation-airodump-final-1](/assets/images/01/fragmentation-airodump-final-1.png)
 
 - Use aircrack-ng on the _.cap_ file to acquire the WEP key:
 
 `aircrack-ng fragmentation-keystream-01.cap`
 
-![fragmentation-aircrack-initial](/content/images/2020/01/fragmentation-aircrack-initial.png)
+![fragmentation-aircrack-initial](/assets/images/01/fragmentation-aircrack-initial.png)
 
-![fragmentation-aircrack-final-1](/content/images/2020/01/fragmentation-aircrack-final-1.png)
+![fragmentation-aircrack-final-1](/assets/images/01/fragmentation-aircrack-final-1.png)
 
 The WEP Key (Router Password) has been found!
 
@@ -581,7 +581,7 @@ The interface is changed from **wlan0** to **wlan0mon** indicating the wireless 
 
 `airodump-ng -c 3 --essid DIR-615 caffe-latte-attack-key wlanm0mon`
 
-![caffe-latte-airodump-initial-1](/content/images/2020/01/caffe-latte-airodump-initial-1.png)
+![caffe-latte-airodump-initial-1](/assets/images/01/caffe-latte-airodump-initial-1.png)
 
     --essid: the name of the SSID (DIR-615)
     -c: the channel the router is running on (3)
@@ -591,7 +591,7 @@ The interface is changed from **wlan0** to **wlan0mon** indicating the wireless 
 
 `aireplay-ng -6 -h 00:C0:CA:96:C1:B6 -b 00:18:E7:EA:28:87 -D wlan0mon`
 
-![final-caffe-latte-1](/content/images/2020/01/final-caffe-latte-1.png)
+![final-caffe-latte-1](/assets/images/01/final-caffe-latte-1.png)
 
     -6: use the Caffe Latte Attack
     -h: the MAC address of the network card you are using (00:C0:CA:96:C1:B6)
@@ -600,21 +600,21 @@ The interface is changed from **wlan0** to **wlan0mon** indicating the wireless 
 
 After some time, usually at around 50,000 to 100,000 IVs (data column in airodump-ng), you may begin the next step. Here is when I decided to stop my capture and try to capture the WEP key:
 
-![final-caffe-latte-attack-final](/content/images/2020/01/final-caffe-latte-attack-final.png)
+![final-caffe-latte-attack-final](/assets/images/01/final-caffe-latte-attack-final.png)
 
-![final-caffe-latte-airodumpfinal](/content/images/2020/01/final-caffe-latte-airodumpfinal.png)
+![final-caffe-latte-airodumpfinal](/assets/images/01/final-caffe-latte-airodumpfinal.png)
 
 - To expedite the process or if you are having problems getting IVs, a [Deauthentication Attack](#deauthentication) has help me before:
 
-![final-caffe-latte-deauth](/content/images/2020/01/final-caffe-latte-deauth.png)
+![final-caffe-latte-deauth](/assets/images/01/final-caffe-latte-deauth.png)
 
 - Use aircrack-ng on the output keystream file from airodump-ng to acquire the WEP key:
 
 `aircrack-ng caffe-latte-attack-key-01.cap`
 
-![final-caffe-latte-aircrack](/content/images/2020/01/final-caffe-latte-aircrack.png)
+![final-caffe-latte-aircrack](/assets/images/01/final-caffe-latte-aircrack.png)
 
-![final-caffe-latte-aircrack-final-1](/content/images/2020/01/final-caffe-latte-aircrack-final-1.png)
+![final-caffe-latte-aircrack-final-1](/assets/images/01/final-caffe-latte-aircrack-final-1.png)
 
 The key has been found!
 
@@ -654,7 +654,7 @@ The interface is changed from **wlan0** to **wlan0mon** indicating the wireless 
 
 `airodump-ng -c 3 --essid "DIR-615" -w hirte-attack-key wlan0mon`
 
-![hirte-airdodump-initial-1](/content/images/2020/01/hirte-airdodump-initial-1.png)
+![hirte-airdodump-initial-1](/assets/images/01/hirte-airdodump-initial-1.png)
 
     -c: the channel the router is running on (3)
     --essid: the name of the SSID (DIR-615)
@@ -664,11 +664,11 @@ The interface is changed from **wlan0** to **wlan0mon** indicating the wireless 
 
 `aireplay-ng -7 -h 00:C0:CA:96:C1:B6 -D wlan0mon`
 
-![hirte-1](/content/images/2020/01/hirte-1.png)
+![hirte-1](/assets/images/01/hirte-1.png)
 
-![hirte-2](/content/images/2020/01/hirte-2.png)
+![hirte-2](/assets/images/01/hirte-2.png)
 
-![hirte-3](/content/images/2020/01/hirte-3.png)
+![hirte-3](/assets/images/01/hirte-3.png)
 
     -7: flag to determine the Hirte Attack
     -h: MAC address of your wireless card (00:C0:CA:96:C1:B6)
@@ -676,17 +676,17 @@ The interface is changed from **wlan0** to **wlan0mon** indicating the wireless 
 
 - As with the Caffe Latte attack, a [Deauthentication Attack](#deauthentication) may assist in capturing IVs (data column in airodump-ng):
 
-![hirte-deauth](/content/images/2020/01/hirte-deauth.png)
+![hirte-deauth](/assets/images/01/hirte-deauth.png)
 
 - Finally, use aircrack-ng to crack the WEP key:
 
 `aircrack-ng hirte-attack-key-01.cap`
 
-![hirte-aircrack-initial](/content/images/2020/01/hirte-aircrack-initial.png)
+![hirte-aircrack-initial](/assets/images/01/hirte-aircrack-initial.png)
 
 After performing the above command, you should see the screen below:
 
-![AIRCRACK-FINAL](/content/images/2020/01/AIRCRACK-FINAL.png)
+![AIRCRACK-FINAL](/assets/images/01/AIRCRACK-FINAL.png)
 
 The key has been found!
 
@@ -807,4 +807,3 @@ The output shows that the injection is working and a ping of the AP results in (
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 
 ### [Back to Attack Listings](#aireplayngwepattacklisting)
-<!--kg-card-end: markdown-->
