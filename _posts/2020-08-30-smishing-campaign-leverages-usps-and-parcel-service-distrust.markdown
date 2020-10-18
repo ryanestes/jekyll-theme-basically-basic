@@ -113,59 +113,59 @@ Listed below are the domains and URLs discovered from this SMiShing campaign, so
 
 ### domains
 
-- l1smc[.]info
-- l2scr[.]info
-- l3smr[.]info
-- l4sve[.]info
-- l5ssv[.]info
-- bgfdc[.]info
-- sbcae[.]info
-- utzho[.]info
+l1smc[.]info  
+l2scr[.]info  
+l3smr[.]info  
+l4sve[.]info  
+l5ssv[.]info  
+bgfdc[.]info  
+sbcae[.]info  
+utzho[.]info  
 
 _updated with additional domains on 10/17/2020_
 
-l7smv[.]info
-l8smk[.]info
-m3svc[.]info
-m5smz[.]info
-m7smz[.]info
-n4scn[.]info
-q2sxz[.]info
-vfeiq[.]info
-cxzhj[.]info
+l7smv[.]info  
+l8smk[.]info  
+m3svc[.]info  
+m5smz[.]info  
+m7smz[.]info  
+n4scn[.]info  
+q2sxz[.]info  
+vfeiq[.]info  
+cxzhj[.]info  
 
 ### URLs
 
-- l1smc[.]info/i4B8uiee0a
-- l1smc[.]info/i4B8uin2vq
-- l2scr[.]info/KiF46J87bC
-- l2scr[.]info/KiDo37zjMj
-- l2scr[.]info/KigKalF3R9
-- l2scr[.]info/KiDo375mT7
-- l2scr[.]info/KilMlbzjMj
-- l3smr[.]info/09Nh46erLO
-- l4sve[.]info/o6icgxntOe
-- l4sve[.]info/o6icgxzjMj
-- l5ssv[.]info/QTyhVcBhKs
-- l5ssv[.]info/QTuVNYkWh3
-- l5ssv[.]info/QTwBRAjqK2
-- l5ssv[.]info/QTyhVc6tel
-- bgfdc[.]info/7vsqg76ZGz
-- sbcae[.]info/BYhxV4jAB1
-- utzho[.]info/Tf7Slh4POr
+l1smc[.]info/i4B8uiee0a  
+l1smc[.]info/i4B8uin2vq  
+l2scr[.]info/KiF46J87bC  
+l2scr[.]info/KiDo37zjMj  
+l2scr[.]info/KigKalF3R9  
+l2scr[.]info/KiDo375mT7  
+l2scr[.]info/KilMlbzjMj  
+l3smr[.]info/09Nh46erLO  
+l4sve[.]info/o6icgxntOe  
+l4sve[.]info/o6icgxzjMj  
+l5ssv[.]info/QTyhVcBhKs  
+l5ssv[.]info/QTuVNYkWh3  
+l5ssv[.]info/QTwBRAjqK2  
+l5ssv[.]info/QTyhVc6tel  
+bgfdc[.]info/7vsqg76ZGz  
+sbcae[.]info/BYhxV4jAB1  
+utzho[.]info/Tf7Slh4POr  
 
 _updated with additional URLs on 10/17/2020_
 
-l7smv[.]info/rCYwmWzjMj
-l7smv[.]info/rCYwmW3y4q
-l8smk[.]info/GpEfgu7ovl
-m3svc[.]info/4pKegC7ovl
-m3svc[.]info/4pGS9oFVc
-m3svc[.]info/4pGS9oi9xE
-m5smz[.]info/RXLW2n5gWZ
-m7smz[.]info/ShomZNjSTf
-q2sxz[.]info/am0RXUevO9
-n4scn[.]info/lg8rnM8FrU
-m7smz[.]info/ShBNsHqdZn
-vfeiq[.]info/gnuka5wN9C
-cxzhj[.]info/azH1nl7KKR
+l7smv[.]info/rCYwmWzjMj  
+l7smv[.]info/rCYwmW3y4q  
+l8smk[.]info/GpEfgu7ovl  
+m3svc[.]info/4pKegC7ovl  
+m3svc[.]info/4pGS9oFVc  
+m3svc[.]info/4pGS9oi9xE  
+m5smz[.]info/RXLW2n5gWZ  
+m7smz[.]info/ShomZNjSTf  
+q2sxz[.]info/am0RXUevO9  
+n4scn[.]info/lg8rnM8FrU  
+m7smz[.]info/ShBNsHqdZn  
+vfeiq[.]info/gnuka5wN9C  
+cxzhj[.]info/azH1nl7KKR  
