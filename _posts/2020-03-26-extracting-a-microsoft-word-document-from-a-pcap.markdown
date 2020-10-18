@@ -17,21 +17,13 @@ tags:
 ---
 
 ## Introduction
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 
 This post pertains to a prior Capture-The-Flag (CTF) competition I was competing in where one of the challenges was to read the text (or flag) of a file from a packet capture (PCAP). The PCAP was taken from a user downloading a file from a misconfigured or outdated FTP server that didn't have SSL/TLS encryption. So, I set up a simple FileZilla FTP server on my Windows machine and attempted to recreate the challenge so I could have documentation on how to perform some of the actions. This post covers how to read unencrypted FTP traffic from a Wireshark PCAP and file carving techniques to be able to recreate a file from a PCAP stream.
 <!--more-->
-<!--kg-card-end: markdown-->
-* * *
-<!--kg-card-begin: markdown-->
 
 _Disclaimer: This post is meant for educational purposes only and any information obtained sholuld not be used for malicious purposes. I will not be responsible for any damage, harm, or legal action derived from any information within this post._
 
-<!--kg-card-end: markdown-->
-* * *
-<!--kg-card-begin: markdown-->
 ## Table of Contents
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 
 This post is broken down into four sections:
 
@@ -44,9 +36,7 @@ This post is broken down into four sections:
 
 [FTP File Carving PCAP](https://github.com/ryanestes/BlogFiles/blob/master/FTP-FILECARVE.pcapng)
 
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 ### Setting Up The FileZilla FTP Server
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 
 The first step to recreate this challenge is to acquire the sufficient applications to perform these operations. The applications I chose (and you can shoose what works for you) are FileZilla for the FTP server and WinSCP as an FTP client. Other popular choices are VSFTPD for an FTP server and a simple Linux terminal as a client. As a Windows user, I recommend these two applications if your aim is to recreate this challenge. Now to set up the FileZilla Server.
 
@@ -121,9 +111,8 @@ The first step to recreate this challenge is to acquire the sufficient applicati
 [WinSCP](https://winscp.net/eng/index.php)
 
 - Go through the download prompts and then minimize or set WinSCP aside for now as well. Just a little more prep work before the fun stuff.
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
+
 ### Creating the Wireshark PCAP
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 
 All of the initial preperation work is done, for the most part. The only preperation work to be done is to get Wireshark downloaded (if not already) and create the file that you will be capturing from/to the FileZilla server. Then we can recreate the scenario and capture the traffic accordingly.
 
@@ -155,9 +144,7 @@ All of the initial preperation work is done, for the most part. The only prepera
 
 ![16-Desktop](/assets/images/03/16-Desktop.png)
 
--
-
-Login to the FileZilla FTP server using WinSCP. If you are following along you will need to enter the following or make the following changes:
+- Login to the FileZilla FTP server using WinSCP. If you are following along you will need to enter the following or make the following changes:
 
   - **File Protocol:** FTP
   - **Encryption:** No encryption
@@ -202,9 +189,7 @@ If you have no password just press **OK** again.
 
 ![23-pcap-save](/assets/images/03/23-pcap-save.png)
 
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 ### File Detection
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 
 Finally, time for the fun stuff. This section is very short and shows how to pinpoint FTP data from other data in a nonencrypted FTP Wireshark PCAP. The process is very trivial, just look for the packet that has the Protocol column labeled **FTP-DATA**. Other FTP traffic such as authentication and directory changes are labeled as **FTP**. You could also just use a Display Filter at the top of Wireshark and type in "ftp-data" to filter this packet. I removed the color labeling in Wireshark to pinpoint this packet easier. Below is the PCAP of the FTP traffic and I have highlighted the packet in question:
 
@@ -212,9 +197,7 @@ Finally, time for the fun stuff. This section is very short and shows how to pin
 
 You can see on the same row that the file the user downloaded is actually displayed in the packet info. The user downloaded " **Ryans\_Personal\_Information.docx**", which was **11936 bytes**. Now lets see what's in this file!
 
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 ### File Recovery
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 
 This section is where we take the PCAP, and the FTP-DATA packet specifically, and convert the raw packet data back into a Word Document (.docx).
 
@@ -260,12 +243,9 @@ With that being said, perform the following steps to be able to carve out this d
 
 ![33-FINAL](/assets/images/03/33-FINAL.png)
 
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
+
 ## Conclusion
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 
 I performed this challenge in an unknown CTF and wanted to recreate this challenge for anyone trying to learn forensics or to create a CTF challenge yourself. There's a lot of good cybersecurity topics learned from this challenge - forensics, packet captures, FTP server configurations, importance of encryption, and more! I hope this has inspired or assisted someone. As always, if there are any questions or concerns with this post don't hesitate to email me or comment below.
 
 Thanks!
-
-<!--kg-card-end: markdown-->
