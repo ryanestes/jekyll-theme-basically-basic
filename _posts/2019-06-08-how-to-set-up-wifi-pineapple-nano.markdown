@@ -283,7 +283,7 @@ _Kudos to the user audibleblink in the Hak5 forums_
 
 1. Plug in the WiFi Pineapple into an available USB slot using the supplied USB Y Cable or any USB that meets the [WiFi Pineapple power specifications](https://docs.hak5.org/hc/en-us/articles/360011238494-Specifications-and-Power-Considerations)
 
-![IMG_3626](/content/images/2019/07/IMG_3626.jpg)
+![IMG_3626](/assets/images/07/IMG_3626.jpg)
 
 
 
@@ -292,8 +292,8 @@ _Kudos to the user audibleblink in the Hak5 forums_
 
 1. Navigate to **(Apple Menu) -\> System Preferences -\> Network**
 
-![1](/content/images/2019/07/1.JPG)  
-![2](/content/images/2019/07/2.JPG)
+![1](/assets/images/07/1.JPG)  
+![2](/assets/images/07/2.JPG)
 
 
 
@@ -304,7 +304,7 @@ _Kudos to the user audibleblink in the Hak5 forums_
 
 _Note: The WiFi Pineapple Nano Adapter will have an **AX88x72A** chipset description_
 
-![3](/content/images/2019/07/3.JPG)
+![3](/assets/images/07/3.JPG)
 
 
 
@@ -318,7 +318,7 @@ _Note: The WiFi Pineapple Nano Adapter will have an **AX88x72A** chipset descrip
 
 
 
-![censor1](/content/images/2019/07/censor1.jpg)
+![censor1](/assets/images/07/censor1.jpg)
 
 
 
@@ -342,7 +342,7 @@ _Kudos to the user audibleblink in the Hak5 forums_
 
 
 
-![censor2](/content/images/2019/07/censor2.jpg)
+![censor2](/assets/images/07/censor2.jpg)
 
 
 
@@ -351,7 +351,7 @@ _Kudos to the user audibleblink in the Hak5 forums_
 
 5. The Wi-Fi Pineapple will reboot and you can now check the IP address and gateway were successfully changed in the **Network** menu again. If it's the 192.168.2.x values, you should be able to continue to the Internet connection sharing portion
 
-![11-pre](/content/images/2019/07/11-pre.JPG)
+![11-pre](/assets/images/07/11-pre.JPG)
 
 
 
@@ -360,7 +360,7 @@ _Kudos to the user audibleblink in the Hak5 forums_
 
 6. Now, return to the **System Preferences** menu and select **Sharing**
 
-![4](/content/images/2019/07/4.JPG)
+![4](/assets/images/07/4.JPG)
 
 
 
@@ -369,7 +369,7 @@ _Kudos to the user audibleblink in the Hak5 forums_
 
 7. Highlight the **Internet Sharing** checkbox in the left menu and Internet sharing information should display to the right. Select the **Share your connection from:** dropdown menu and select the adapter that is providing Internet access. In my case, **Wi-Fi**. From the **To computers using:** menu, select the WiFi Pineapple adapter. In my case the adapter is named **AX88x72A**
 
-![5-censored](/content/images/2019/07/5-censored.jpg)
+![5-censored](/assets/images/07/5-censored.jpg)
 
 
 
@@ -378,8 +378,8 @@ _Kudos to the user audibleblink in the Hak5 forums_
 
 8. Select the checkbox next to Internet Sharing in the left menu and select **Start** and ensure it remains checked after clicking **Start**.
 
-![7](/content/images/2019/07/7.JPG)  
- ![6](/content/images/2019/07/6.JPG)
+![7](/assets/images/07/7.JPG)  
+ ![6](/assets/images/07/6.JPG)
 
 
 
@@ -388,7 +388,7 @@ _Kudos to the user audibleblink in the Hak5 forums_
 
 9. Navigate to **192.168.2.10:1471** or whatever IP address maps to the IP address you set in _step 6_, ensure the port is **1471** and you will be met with the Welcome screen. Use the on-screen instructions to set up the WiFi Pineapple
 
-![8-pre](/content/images/2019/07/8-pre.JPG)
+![8-pre](/assets/images/07/8-pre.JPG)
 
 
 
@@ -397,7 +397,7 @@ _Kudos to the user audibleblink in the Hak5 forums_
 
 10. Click the **Load Bulletins from WiFiPineapple.com** button on the Dashboard, if bulletins successfully load you're all ready to go!
 
-![13](/content/images/2019/07/13.JPG)
+![13](/assets/images/07/13.JPG)
 
 
 
@@ -445,7 +445,7 @@ _This proof of concept was created using a Nokia 6.1 running Android 9 "Pie" (An
 
 1. Plug in the WiFi Pineapple into an available USB slot using the supplied USB Y Cable or any USB that meets the [WiFi Pineapple power specifications](https://docs.hak5.org/hc/en-us/articles/360011238494-Specifications-and-Power-Considerations). Connect the charging cord to your Android device and plug the USB end into the female USB insertion on the WiFi Pineapple
 
-![android-wifi-0](/content/images/2019/08/android-wifi-0.jpeg)
+![android-wifi-0](/assets/images/08/android-wifi-0.jpeg)
 
 
 
@@ -454,8 +454,8 @@ _This proof of concept was created using a Nokia 6.1 running Android 9 "Pie" (An
 
 2. On your Android device, go the **Play Store** and search for _WiFi Pineapple Connector_ and download the **WiFi Pineapple Connector** App
 
-![android-wifi-1](/content/images/2019/08/android-wifi-1.png)  
- ![android-wifi-2](/content/images/2019/08/android-wifi-2.png)
+![android-wifi-1](/assets/images/08/android-wifi-1.png)  
+ ![android-wifi-2](/assets/images/08/android-wifi-2.png)
 
 
 
@@ -464,7 +464,7 @@ _This proof of concept was created using a Nokia 6.1 running Android 9 "Pie" (An
 
 3. Open the **WiFi Pineapple Connector** App and a modal should appear prompting for _USB Tethering Required_. Click **No** , that you don't have it enabled (If you do already click **Yes** )
 
-![android-wifi-3](/content/images/2019/08/android-wifi-3.png)
+![android-wifi-3](/assets/images/08/android-wifi-3.png)
 
 
 
@@ -473,8 +473,8 @@ _This proof of concept was created using a Nokia 6.1 running Android 9 "Pie" (An
 
 4. The **Tethering & portable hotspot** menu should appear. Click the slider on the right, next to the **USB tethering** option to enable USB tethering to the WiFi Pineapple
 
-![android-wifi-4](/content/images/2019/08/android-wifi-4.png)  
- ![android-wifi-5](/content/images/2019/08/android-wifi-5.png)
+![android-wifi-4](/assets/images/08/android-wifi-4.png)  
+ ![android-wifi-5](/assets/images/08/android-wifi-5.png)
 
 
 
@@ -483,7 +483,7 @@ _This proof of concept was created using a Nokia 6.1 running Android 9 "Pie" (An
 
 5. Click the _Back_ button on the Android device to return to the **WiFi Pineapple Connector** App. Now click **Yes** that you have now enabled USB tethering
 
-![android-wifi-v2-1-1](/content/images/2019/08/android-wifi-v2-1-1.png)
+![android-wifi-v2-1-1](/assets/images/08/android-wifi-v2-1-1.png)
 
 
 
@@ -492,7 +492,7 @@ _This proof of concept was created using a Nokia 6.1 running Android 9 "Pie" (An
 
 6. After a few seconds of detecting the WiFi Pineapple, the app should open a web browser and navigate to whatever IP address the DHCP provided on your internal network with the port of **1471**. In my case this was **192.168.42.235:1471**. Follow the on screen instructions to set up the WiFi Pineapple completely, otherwise, login!
 
-![android-wifi-6](/content/images/2019/08/android-wifi-6.png)
+![android-wifi-6](/assets/images/08/android-wifi-6.png)
 
 
 
@@ -501,7 +501,7 @@ _This proof of concept was created using a Nokia 6.1 running Android 9 "Pie" (An
 
 7. If your android device is connected to the Internet you should be able to immediately load bulletins and be ready to go
 
-![android-wifi-7](/content/images/2019/08/android-wifi-7.png)
+![android-wifi-7](/assets/images/08/android-wifi-7.png)
 
 
 
