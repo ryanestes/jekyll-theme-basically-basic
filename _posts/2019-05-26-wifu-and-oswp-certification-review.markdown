@@ -38,7 +38,7 @@ OSWP is by far the most affordable certification Offensive Security Offers, excl
 <!--kg-card-end: markdown-->
 * * *
 
-**_Note:_** _ **AWE/OSEE cost is based on live training offerings through Black Hat USA 2018 and prior.** _
+**_Note: AWE/OSEE cost is based on live training offerings through Black Hat USA 2018 and prior.**
 
 ## Enrollment Process
 
@@ -46,7 +46,7 @@ The enrollment process is straightforward. As of this writing the fee for the co
 
 <!--kg-card-begin: markdown-->
 
-![Enrollment Screenshot](/content/images/2019/06/OSWP_Enrollment_pic.png)
+![Enrollment Screenshot](/content/images/06/OSWP_Enrollment_pic.png)
 
 _The enrollment and one time fee includes all of the educational content and an exam attempt._
 
@@ -60,7 +60,7 @@ Offensive Security did the honor of providing the course syllabus in it's entire
 
 Within the syllabus I want to highlight some important concepts and some things to consider. First, and most importantly, there are hardware requirements within the course prerequisites. **You must have a compatible wireless card/adapter and compatible router for the course!** Offensive Security provides recommendations for hardware:
 
-![hardware_specs_oswp](/content/images/2019/06/hardware_specs_oswp.png)
+![hardware_specs_oswp](/content/images/06/hardware_specs_oswp.png)
 
 The hardware is a bit outdated so I used similar models of the products I could find on Amazon. A small table shows:
 
@@ -101,14 +101,8 @@ According to the OSWP website, an OSWP holder can:
 
 Here is a timeline inforgraphic from initial enrollment to email verification of passing:
 
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="/content/images/2019/06/OSWP-Certification-Timeline.jpg" class="kg-image"></figure><!--kg-card-begin: markdown-->
+![hardware_specs_oswp](/content/images/06/OSWP-Certification-Timeline.jpg)
+
 ## Conclusion
 
 To wrap up, I'd say the OSWP certification and prerequisite WiFu course is not only a great way to learn how to crack WiFI networks and learn conceptual aspects of the 802.11 standard, but a great teaser on Offensive Security certifications and processes. I only studied for about 2 weeks total and passed my certification attempt on my first try. I plan to use this certification to jumpstart my wireless security research and to possibly attempt the Offensive Security Certified Professional (OSCP) in the near future.
-
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
-#### Verify my OSWP via Acclaim
-<!--kg-card-end: markdown--><!--kg-card-begin: html-->
-
-<script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script><!--kg-card-end: html-->
-* * *
