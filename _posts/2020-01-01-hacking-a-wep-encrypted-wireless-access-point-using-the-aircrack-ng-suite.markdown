@@ -63,18 +63,18 @@ For this proof-of-concept, I am using the following software/hardware:
 
 ### Aireplay-ng WEP Attack Listing
 
-[0. Deauthentication](#deauthentication)
-[1. Fake Authentication](#fake-authentication)
-[2. Interactive Packet Replay](#interactive-packet-replay)
-[3. ARP Request Replay Attack](#arp-request-replay-attack)
-[4. KoreK ChopChop Attack](#korek-chopchop-attack)
-[5. Fragmentation Attack](#fragmentation-attack)
-[6. Caffe Latte Attack](#caffe-latte-attack)
-[7. Hirte Attack](#hirte-attack)
-[8. WPA Migration Mode](#)
-[9. Injection Test](#injection-test)
+[0. Deauthentication](#deauthentication)  
+[1. Fake Authentication](#fake-authentication)  
+[2. Interactive Packet Replay](#interactive-packet-replay)  
+[3. ARP Request Replay Attack](#arp-request-replay-attack)  
+[4. KoreK ChopChop Attack](#korek-chopchop-attack)  
+[5. Fragmentation Attack](#fragmentation-attack)  
+[6. Caffe Latte Attack](#caffe-latte-attack)  
+[7. Hirte Attack](#hirte-attack)  
+[8. WPA Migration Mode](#)  
+[9. Injection Test](#injection-test)  
 
-**To test if your Wi-Fi USB adapter is capable of packet injection, begin with attack number 9 - [Injection Test](#injectiontest)**
+**To test if your Wi-Fi USB adapter is capable of packet injection, begin with attack number 9 - [Injection Test](#injection-test)**
 
 ### Discovering Victim Router Easily:
 
@@ -131,7 +131,7 @@ This attack assumes you know:
 - the victim AP SSID, MAC address, and channel
 - a connected client and it's MAC address (in my case, this is an android tablet)
 
-If you don't have this information, use the [injection test]((#injectiontest)) or [how to discover a victim router easily](#discovervictimroutereasily), above.
+If you don't have this information, use the [injection test]((#injection-test)) or [how to discover a victim router easily](#discover-victim-router-easily), above.
 
 **START**
 
@@ -188,7 +188,7 @@ This attack assumes you know:
 - the victim AP SSID, MAC address, and channel
 - a connected client and it's MAC address (in my case, this is an android tablet)
 
-If you don't have this information, use the [injection test]((#injectiontest)) or [how to discover a victim router easily](#discovervictimroutereasily), above.
+If you don't have this information, use the [injection test]((#injection-test)) or [how to discover a victim router easily](#discover-victim-router-easily), above.
 
 **START**
 
@@ -242,7 +242,7 @@ This attack is a very useful attack and can not only be used alone to acquire a 
 
 _Basically, we're looking for an ARP packet._
 
-Prior to this attack, it is good practice to conduct the [Fake Authentication attack](#fakeauthentication) above for this attack to be more reliable.
+Prior to this attack, it is good practice to conduct the [Fake Authentication attack](#fake-authentication) above for this attack to be more reliable.
 
 **Start**
 
@@ -307,7 +307,7 @@ Whenever you are done with activities, ensure to stop the monitor mode. The high
 
 This attack takes an ARP packet from the AP and replays it back to the AP, generating new IVs in order to crack the WEP password using Aircrack-ng. An ARP packet converts a layer 3 logical address (IP address) to a layer 2 physical address (MAC address). You can look more into the Address Resolution Protocol (ARP) in [RFC 826](https://tools.ietf.org/html/rfc826).
 
-This attack assumes you have performed the [interactive packet replay attack](#interactivepacketreplay) above to capture an authentic ARP packet.
+This attack assumes you have performed the [interactive packet replay attack](#interactive-packet-replay) above to capture an authentic ARP packet.
 
 For more reliability, perform a [fake authentication attack](#fakeauthentication) as well.
 
@@ -381,7 +381,7 @@ Whenever you are done with activities, ensure to stop the monitor mode. The high
 
 ## KoreK ChopChop Attack
 
-This attack is not used to acquire a WEP key. Rather, it uses cryptanalysis to reveal WEP encrypted traffic plaintext! Basically, it's a wireless client's worst nightmare; an eavesdropper acquiring all your traffic in plaintext. Yet, it isn't without it's flaws and it isn't perfect. It tends to drop shorter packets and tries to guess them instead. I won't go into the cryptography mathematics, just know it takes advantage of a flaw in the CRC-32 algorithm used to calculate the ICV (used to ensure no data in transit was altered). The KoreK ChopChop attack is commonly used if the [Fragmentation Attack](#fragmentation) is giving you trouble, and vice versa.
+This attack is not used to acquire a WEP key. Rather, it uses cryptanalysis to reveal WEP encrypted traffic plaintext! Basically, it's a wireless client's worst nightmare; an eavesdropper acquiring all your traffic in plaintext. Yet, it isn't without it's flaws and it isn't perfect. It tends to drop shorter packets and tries to guess them instead. I won't go into the cryptography mathematics, just know it takes advantage of a flaw in the CRC-32 algorithm used to calculate the ICV (used to ensure no data in transit was altered). The KoreK ChopChop attack is commonly used if the [Fragmentation Attack](#fragmentation-attack) is giving you trouble, and vice versa.
 
 **This attack uses packetforge-ng, a tool within aircrack-ng used to craft custom packets**
 
@@ -423,7 +423,7 @@ The interface is changed from **wlan0** to **wlan0mon** indicating the wireless 
 
 - Once you are done, the attack will create a keystream titled: _replay\_something.xor_
 
-**THIS ATTACK NOW MOVES TO THE [FRAGMENTATION ATTACK](#fragmentationattack) BELOW! (THE PROCESS IS EXACTLY THE SAME FROM THIS POINT)**
+**THIS ATTACK NOW MOVES TO THE [FRAGMENTATION ATTACK](#fragmentation-attack) BELOW! (THE PROCESS IS EXACTLY THE SAME FROM THIS POINT)**
 
 - Turn off monitoring mode on the interface when complete with all activities:
 
@@ -459,7 +459,7 @@ The channel number goes at the end of the command, highlighted above.
 
 The interface is changed from **wlan0** to **wlan0mon** indicating the wireless card was succesfully placed into monitoring mode.
 
-- Before the Fragmentation Attack is performed, you MUST perform a [Fake Authentication](#fakeauthentication) to the victim AP:
+- Before the Fragmentation Attack is performed, you MUST perform a [Fake Authentication](#fake-authentication) to the victim AP:
 
 `aireplay-ng -1 0 -e DIR-615 -a 00:18:E7:EA:28:87 -h 00:C0:CA:96:C1:B6 wlan0mon`
 
