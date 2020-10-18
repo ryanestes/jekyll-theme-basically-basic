@@ -14,7 +14,7 @@ I haven't posted in a while so I figured I had enough time to do a simple post o
 
 **URL:** s3[.]us-west-1[.]wasabisys[.]com/tranqueavisp/indexs[.]html
 
-![Facebook Phish 1](/content/images/08-14-2020/fb-phish-1.png)
+![Facebook Phish 1](/assets/images/08-14-2020/fb-phish-1.png)
 
 When navigating to the site, there are immediate red flags.
 
@@ -25,21 +25,21 @@ When navigating to the site, there are immediate red flags.
 
 I've already determined that this is a phish just from the assumptions above, but it doesn't hurt being curious to see what else attackers are up to. Upon inspecting the source code of the website and navigating to the authentication form I noticed an obvious anomaly - the form action sends the credentials to an external website. So I looked into this website too.
 
-![Facebook Phish 2](/content/images/08-14-2020/fb-phish-2.png)
+![Facebook Phish 2](/assets/images/08-14-2020/fb-phish-2.png)
 
 ## DNS Information
 
 A DNS lookup shows that this domain is using Cloudflare as a proxy. However, the TXT record shows that the owner of this domain has an SPF record displaying a different IP than the A record. So I looked up this IP.
 
-![Facebook Phish 3](/content/images/08-14-2020/fb-phish-3.png)
+![Facebook Phish 3](/assets/images/08-14-2020/fb-phish-3.png)
 
 ## The Phishing Attempt
 
 This IP address appears to be located in Moscow, Russia. It is also worth noting that this IP address has ports open for HTTP(S), FTP(S), IMAP(S), SMTP(S), and DNS.
 
-![Facebook Phish 4](/content/images/08-14-2020/fb-phish-4.png)
+![Facebook Phish 4](/assets/images/08-14-2020/fb-phish-4.png)
 
-![Facebook Phish 5](/content/images/08-14-2020/fb-phish-5.png)
+![Facebook Phish 5](/assets/images/08-14-2020/fb-phish-5.png)
 
 ## Conclusion
 
