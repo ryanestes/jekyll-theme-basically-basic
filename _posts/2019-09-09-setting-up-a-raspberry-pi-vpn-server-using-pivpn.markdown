@@ -260,4 +260,4 @@ When enabling SSH on a Pi that may be connected to the internet, you should chan
 
 # Thank You!
 
-I hope this helped solve some issues you were having with setting up SSH, PiVPN, Pi-Hole, and adding lists to Pi-Hole. If you have any questions [Contact](https://ryanestes.ghost.io/contact/) me via email with any concerns.
+I hope this helped solve some issues you were having with setting up SSH, PiVPN, Pi-Hole, and adding lists to Pi-Hole. If you have any questions [Contact](https://ryandinho.me/contact/) me via email with any concerns.
