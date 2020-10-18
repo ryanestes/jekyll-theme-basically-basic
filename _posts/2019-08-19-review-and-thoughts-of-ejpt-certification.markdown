@@ -12,12 +12,13 @@ tags:
 
 On August 12th, 2019 I began studying for the Penetration Testing Student (PTS) course and achieved the correlating eLearnSecurity Junior Penetration Tester (eJPT) certification on August 18th, 2019. This post will discuss both the PTS course and eJPT exam from purchase to certification attainment.
 
+<!--more-->
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 #### Intro
 <!--kg-card-end: markdown-->
 
 I can't say enough good things about the PTS course. It was exactly what I was looking for as an intermediate IT professional looking to dive into the world of penetration testing (Although I previously completed the OSWP certification). The PTS course is advertised as "Tailored for Beginners" and covers the basics of networking, routing, information gathering techniques. buffer overflows, various web application attacks, SQLi, pcap analysis, password cracking, data exfiltration, and a lot more. In fact, eLearnSecurity doesn't hide the contents of the course, as other courses may do. You know exactly what you're getting and what you're getting yourself into. They even allow you to test drive each course they offer for free, which is an entire section of slides to provide preliminary understanding of how they deliver the course content. There are little to no curveballs, eLearnSecurity just wants to concisely provide the knowledge and it is up to the student to learn and practice the hands-on material.  
-<!--more-->
+
 The entire PTSv4 course syllabus can be found here: [https://dsxte2q2nyjxs.cloudfront.net/Syllabus\_PTSV4.pdf](https://dsxte2q2nyjxs.cloudfront.net/Syllabus_PTSV4.pdf)
 
 <!--kg-card-begin: markdown-->
