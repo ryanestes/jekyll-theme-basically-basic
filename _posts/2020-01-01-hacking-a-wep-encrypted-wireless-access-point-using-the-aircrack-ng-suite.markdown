@@ -64,15 +64,15 @@ For this proof-of-concept, I am using the following software/hardware:
 ### Aireplay-ng WEP Attack Listing
 
 [0. Deauthentication](#deauthentication)
-[1. Fake Authentication](#fakeauthentication)
-[2. Interactive Packet Replay](#interactivepacketreplay)
-[3. ARP Request Replay Attack](#arprequestreplayattack)
-[4. KoreK ChopChop Attack](#korekchopchopattack)
-[5. Fragmentation Attack](#fragmentationattack)
-[6. Caffe Latte Attack](#caffelatteattack)
-[7. Hirte Attack](#hirteattack)
-[8. WPA Migration Mode](#hirteattack)
-[9. Injection Test](#injectiontest)
+[1. Fake Authentication](#fake-authentication)
+[2. Interactive Packet Replay](#interactive-packet-replay)
+[3. ARP Request Replay Attack](#arp-request-replay-attack)
+[4. KoreK ChopChop Attack](#korek-chopchop-attack)
+[5. Fragmentation Attack](#fragmentation-attack)
+[6. Caffe Latte Attack](#caffe-latte-attack)
+[7. Hirte Attack](#hirte-attack)
+[8. WPA Migration Mode](#)
+[9. Injection Test](#injection-test)
 
 **To test if your Wi-Fi USB adapter is capable of packet injection, begin with attack number 9 - [Injection Test](#injectiontest)**
 
@@ -174,6 +174,8 @@ The deauthentication process happens really quick and if you monitor your victim
 
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 
+### [Back to Attack Listings](#aireplay-ng-wep-attack-listing)
+
 ## Fake Authentication
 
 _This attack doesn't directly yield a WEP key_
@@ -228,6 +230,8 @@ Highlighted in the picture above in the airodump-ng output (`airodump-ng --chann
 ![injectiontest8-stop-1-1](/assets/images/12/injectiontest8-stop-1-1.png)
 
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
+
+### [Back to Attack Listings](#aireplay-ng-wep-attack-listing)
 
 ## Interactive Packet Replay
 
@@ -296,6 +300,8 @@ The key was found!
 ![injectiontest8-stop-1-1](/assets/images/12/injectiontest8-stop-1-1.png)
 
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
+
+### [Back to Attack Listings](#aireplay-ng-wep-attack-listing)
 
 ## ARP Request Replay Attack
 
@@ -371,6 +377,8 @@ The key is found!
 
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 
+### [Back to Attack Listings](#aireplay-ng-wep-attack-listing)
+
 ## KoreK ChopChop Attack
 
 This attack is not used to acquire a WEP key. Rather, it uses cryptanalysis to reveal WEP encrypted traffic plaintext! Basically, it's a wireless client's worst nightmare; an eavesdropper acquiring all your traffic in plaintext. Yet, it isn't without it's flaws and it isn't perfect. It tends to drop shorter packets and tries to guess them instead. I won't go into the cryptography mathematics, just know it takes advantage of a flaw in the CRC-32 algorithm used to calculate the ICV (used to ensure no data in transit was altered). The KoreK ChopChop attack is commonly used if the [Fragmentation Attack](#fragmentation) is giving you trouble, and vice versa.
@@ -424,6 +432,8 @@ The interface is changed from **wlan0** to **wlan0mon** indicating the wireless 
 ![injectiontest8-stop-1-1](/assets/images/12/injectiontest8-stop-1-1.png)
 
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
+
+### [Back to Attack Listings](#aireplay-ng-wep-attack-listing)
 
 ## Fragmentation Attack
 
@@ -543,6 +553,8 @@ The WEP Key (Router Password) has been found!
 
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 
+### [Back to Attack Listings](#aireplay-ng-wep-attack-listing)
+
 ## Caffe Latte Attack
 
 The Caffe Latte gets its name from the idea that you can perform this attack in a Cafe very quickly. There are actually other methods to perform this attack using the aircrack-ng suite, but aireplay-ng has the attack wrapped in one command. It does this by capturing an ARP packet from a client (there must be a client connected!), manipulates it, sends it back to the AP, and captures the weak IVs using airodump-ng.
@@ -614,6 +626,8 @@ The key has been found!
 
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 
+### [Back to Attack Listings](#aireplay-ng-wep-attack-listing)
+
 ## Hirte Attack
 
 The Hirte attack is simply an enhanced version of the Caffe Latte attack above. The primary difference being that instead of just an ARP packet being captured, it can be an IP packet as well.
@@ -683,6 +697,8 @@ The key has been found!
 ![injectiontest8-stop-1-1](/assets/images/12/injectiontest8-stop-1-1.png)
 
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
+
+### [Back to Attack Listings](#aireplay-ng-wep-attack-listing)
 
 ## Injection Test
 
@@ -790,4 +806,5 @@ The output shows that the injection is working and a ping of the AP results in (
 
 Whenever you are done with activities, ensure to stop the monitor mode. The highlighted box shows the original interface name, indicated a successful monitor halt.
 
-### [Back to Attack Listings](#aireplayngwepattacklisting)
+### [Back to Attack Listings](#aireplay-ng-wep-attack-listing)
+
