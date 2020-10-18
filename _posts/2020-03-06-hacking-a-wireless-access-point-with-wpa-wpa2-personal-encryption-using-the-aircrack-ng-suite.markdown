@@ -17,7 +17,7 @@ tags:
 ---
 
 ## Introduction
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
+
 #### WPA
 
 After WEP encryption was introduced with the ratification of the IEEE 802.11 standard in 1997, it was quickly discovered to be vulnerable to a myriad of exploits. As such, the Wi-Fi Alliance, in conjunction with the IEEE, adopted a quick fix for this increasingly risky encryption mechanism - WPA (Wi-Fi Protected Access) - in 2003. WPA sought to implement fixes for major flaws that were exposed in WEP with the most important change being the adoption of the new security protocol, TKIP (Temporal Key Integrity Protocol). TKIP introduced a few major improvements over WEP including:
