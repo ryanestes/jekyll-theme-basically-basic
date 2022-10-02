@@ -3,7 +3,7 @@ layout: about
 title: About Me
 ---
 
-I created this blog to use as a reference guide for all of my studies, research, and anything I feel important worthy of sharing. Currently, I'm an intrusion analyst for <span style="color:red">**WatchGuard Technologies, Inc.**</span> and a student at <span style="color:red">**Southern Illinois University Edwardsville (SIUE)**</span> studying to obtain a Master of Business Administration (MBA) with a Management Information Systems Specialization. My current research interests are malware reverse engineering/malware analysis and ransomware threats. All information on this website or derived from this website are my personal thoughts and in no way reflect the thoughts of <span style="color:red">**WatchGuard Technologies, Inc.**</span> or <span style="color:blue">**SIUE**</span>. This includes all social media accounts.
+I created this blog to use as a reference guide for all of my studies, research, and anything I feel important worthy of sharing. Currently, I'm an intrusion analyst for <span style="color:red">**WatchGuard Technologies, Inc.**</span> and a student at <span style="color:red">**Southern Illinois University Edwardsville (SIUE)**</span> studying to obtain a Master of Business Administration (MBA) with a Management Information Systems Specialization. My current research interests are malware reverse engineering/malware analysis and ransomware threats. All information on this website or derived from this website are my personal thoughts and in no way reflect the thoughts of <span style="color:red">**WatchGuard Technologies, Inc.**</span> or <span style="color:red">**SIUE**</span>. This includes all social media accounts.
 
 **CV available by [request](/contact.html).**
 
